@@ -1,0 +1,132 @@
+{
+  "formSchema": {
+    "title": "Blu-ray Players",
+    "type": "object",
+    "properties": {
+      "audio-format-support": {
+        "type": "string",
+        "title": "Audio Format Support",
+        "default": "Default Value Setting"
+      },
+      "blu-ray-standard": {
+        "type": "string",
+        "title": "Blu-ray Standard",
+        "default": "Default Value Setting"
+      },
+      "dimensions": {
+        "type": "string",
+        "title": "Dimensions",
+        "default": "Default Value Setting"
+      },
+      "i/o-ports": {
+        "type": "string",
+        "title": "I/O Ports",
+        "default": "Default Value Setting"
+      },
+      "internal-storage": {
+        "type": "string",
+        "title": "Internal Storage",
+        "default": "Default Value Setting"
+      },
+      "network-connectivity": {
+        "type": "string",
+        "title": "Network Connectivity",
+        "default": "Default Value Setting"
+      },
+      "other-features": {
+        "type": "string",
+        "title": "Other features",
+        "default": "Default Value Setting"
+      },
+      "power": {
+        "type": "string",
+        "title": "Power",
+        "default": "Default Value Setting"
+      },
+      "video-format-support": {
+        "type": "string",
+        "title": "Video Format Support",
+        "default": "Default Value Setting"
+      },
+      "weight": {
+        "type": "string",
+        "title": "Weight",
+        "default": "Default Value Setting"
+      }
+    },
+    "required": [
+      "audio-format-support",
+      "blu-ray-standard",
+      "dimensions",
+      "i/o-ports",
+      "internal-storage",
+      "network-connectivity",
+      "other-features",
+      "power",
+      "video-format-support",
+      "weight"
+    ]
+  },
+  "uiSchema": {
+    "audio-format-support": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "blu-ray-standard": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "dimensions": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "i/o-ports": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "internal-storage": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "network-connectivity": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "other-features": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "power": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "video-format-support": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "weight": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}

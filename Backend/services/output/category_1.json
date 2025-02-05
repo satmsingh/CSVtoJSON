@@ -1,0 +1,72 @@
+{
+  "formSchema": {
+    "title": "Apps & Software",
+    "type": "object",
+    "properties": {
+      "features": {
+        "type": "string",
+        "title": "Features",
+        "default": "Most fields are free text fields, unless stated otherwise below."
+      },
+      "operating-system-support": {
+        "type": "string",
+        "title": "Operating System Support",
+        "default": "Most fields are free text fields, unless stated otherwise below."
+      },
+      "other-box-contents": {
+        "type": "string",
+        "title": "Other Box Contents",
+        "default": "Most fields are free text fields, unless stated otherwise below."
+      },
+      "software-support-/-subscription": {
+        "type": "string",
+        "title": "Software Support / Subscription",
+        "default": "Most fields are free text fields, unless stated otherwise below."
+      },
+      "system-requirements": {
+        "type": "string",
+        "title": "System Requirements",
+        "default": "Most fields are free text fields, unless stated otherwise below."
+      }
+    },
+    "required": [
+      "features",
+      "operating-system-support",
+      "other-box-contents",
+      "software-support-/-subscription",
+      "system-requirements"
+    ]
+  },
+  "uiSchema": {
+    "features": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "operating-system-support": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "other-box-contents": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "software-support-/-subscription": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "system-requirements": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}

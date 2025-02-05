@@ -1,0 +1,145 @@
+{
+  "formSchema": {
+    "title": "Bluetooth Headsets",
+    "type": "object",
+    "properties": {
+      "bluetooth-profiles": {
+        "type": "string",
+        "title": "Bluetooth Profiles",
+        "default": "Default Value Setting"
+      },
+      "dimensions": {
+        "type": "string",
+        "title": "Dimensions",
+        "default": "Default Value Setting"
+      },
+      "frequency-range": {
+        "type": "string",
+        "title": "Frequency range",
+        "default": "Default Value Setting"
+      },
+      "interface": {
+        "type": "string",
+        "title": "Interface",
+        "default": "Default Value Setting"
+      },
+      "microphone": {
+        "type": "string",
+        "title": "Microphone",
+        "default": "Default Value Setting"
+      },
+      "other-features": {
+        "type": "string",
+        "title": "Other Features",
+        "default": "Default Value Setting"
+      },
+      "radio": {
+        "type": "string",
+        "title": "Radio",
+        "default": "Default Value Setting"
+      },
+      "range": {
+        "type": "string",
+        "title": "Range",
+        "default": "Default Value Setting"
+      },
+      "standby-time": {
+        "type": "string",
+        "title": "Standby time",
+        "default": "Default Value Setting"
+      },
+      "talk-time": {
+        "type": "string",
+        "title": "Talk time",
+        "default": "Default Value Setting"
+      },
+      "weight": {
+        "type": "string",
+        "title": "Weight",
+        "default": "Default Value Setting"
+      }
+    },
+    "required": [
+      "bluetooth-profiles",
+      "dimensions",
+      "frequency-range",
+      "interface",
+      "microphone",
+      "other-features",
+      "radio",
+      "radio",
+      "range",
+      "standby-time",
+      "talk-time",
+      "weight"
+    ]
+  },
+  "uiSchema": {
+    "bluetooth-profiles": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "dimensions": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "frequency-range": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "interface": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "microphone": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "other-features": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "radio": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "range": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "standby-time": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "talk-time": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "weight": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}

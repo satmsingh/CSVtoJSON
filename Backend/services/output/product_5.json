@@ -1,0 +1,132 @@
+{
+  "formSchema": {
+    "title": "Unknown Product 5",
+    "type": "object",
+    "properties": {
+      "aesthetics": {
+        "type": "number",
+        "title": "Aesthetics",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "functionality": {
+        "type": "number",
+        "title": "Functionality",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "usability": {
+        "type": "number",
+        "title": "Usability",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "value": {
+        "type": "number",
+        "title": "Value",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    "required": [
+      "aesthetics",
+      "functionality",
+      "usability",
+      "value"
+    ]
+  },
+  "uiSchema": {
+    "aesthetics": {
+      "ui:widget": "select"
+    },
+    "functionality": {
+      "ui:widget": "select"
+    },
+    "usability": {
+      "ui:widget": "select"
+    },
+    "value": {
+      "ui:widget": "select"
+    }
+  }
+}

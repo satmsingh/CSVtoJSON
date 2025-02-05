@@ -1,0 +1,144 @@
+{
+  "formSchema": {
+    "title": "External Storage",
+    "type": "object",
+    "properties": {
+      "buffer-size": {
+        "type": "string",
+        "title": "Buffer Size",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "drive-capacity": {
+        "type": "string",
+        "title": "Drive Capacity",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "drive-configuration": {
+        "type": "string",
+        "title": "Drive Configuration",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "drive-type": {
+        "type": "string",
+        "title": "Drive Type",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "general-dimensions": {
+        "type": "string",
+        "title": "General Dimensions",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "interface-type": {
+        "type": "string",
+        "title": "Interface Type",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "other-features": {
+        "type": "string",
+        "title": "Other Features",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "power-connector": {
+        "type": "string",
+        "title": "Power Connector",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "spindle-speed": {
+        "type": "string",
+        "title": "Spindle Speed",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "warranty": {
+        "type": "string",
+        "title": "Warranty",
+        "default": "Power Connector = Yes/No selection"
+      },
+      "weight": {
+        "type": "string",
+        "title": "Weight",
+        "default": "Power Connector = Yes/No selection"
+      }
+    },
+    "required": [
+      "buffer-size",
+      "drive-capacity",
+      "drive-configuration",
+      "drive-type",
+      "general-dimensions",
+      "interface-type",
+      "other-features",
+      "power-connector",
+      "spindle-speed",
+      "warranty",
+      "weight"
+    ]
+  },
+  "uiSchema": {
+    "buffer-size": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "drive-capacity": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "drive-configuration": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "drive-type": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "general-dimensions": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "interface-type": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "other-features": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "power-connector": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "spindle-speed": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "warranty": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "weight": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "formSchema": {
+    "title": "Desktop Systems",
+    "type": "object",
+    "properties": {
+      "audio": {
+        "type": "string",
+        "title": "Audio",
+        "default": "Default Value Setting"
+      },
+      "dimensions": {
+        "type": "string",
+        "title": "Dimensions",
+        "default": "Default Value Setting"
+      },
+      "display": {
+        "type": "string",
+        "title": "Display",
+        "default": "Default Value Setting"
+      },
+      "i/o-ports": {
+        "type": "string",
+        "title": "I/O Ports",
+        "default": "Default Value Setting"
+      },
+      "memory": {
+        "type": "string",
+        "title": "Memory",
+        "default": "Default Value Setting"
+      },
+      "networking-/-communication": {
+        "type": "string",
+        "title": "Networking / Communication",
+        "default": "Default Value Setting"
+      },
+      "operating-system": {
+        "type": "string",
+        "title": "Operating System",
+        "default": "Default Value Setting"
+      },
+      "optical-drive": {
+        "type": "string",
+        "title": "Optical Drive",
+        "default": "Default Value Setting"
+      },
+      "processor-and-chipset": {
+        "type": "string",
+        "title": "Processor and Chipset",
+        "default": "Default Value Setting"
+      },
+      "storage": {
+        "type": "string",
+        "title": "Storage",
+        "default": "Default Value Setting"
+      },
+      "video": {
+        "type": "string",
+        "title": "Video",
+        "default": "Default Value Setting"
+      },
+      "weight": {
+        "type": "string",
+        "title": "Weight",
+        "default": "Default Value Setting"
+      }
+    },
+    "required": [
+      "audio",
+      "dimensions",
+      "display",
+      "i/o-ports",
+      "memory",
+      "networking-/-communication",
+      "operating-system",
+      "optical-drive",
+      "processor-and-chipset",
+      "storage",
+      "video",
+      "weight"
+    ]
+  },
+  "uiSchema": {
+    "audio": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "dimensions": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "display": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "i/o-ports": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "memory": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "networking-/-communication": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "operating-system": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "optical-drive": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "processor-and-chipset": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "storage": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "video": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "weight": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}

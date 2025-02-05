@@ -1,0 +1,60 @@
+{
+  "formSchema": {
+    "title": "Casings",
+    "type": "object",
+    "properties": {
+      "case-cooling": {
+        "type": "string",
+        "title": "Case Cooling",
+        "default": "Default Value Setting"
+      },
+      "casing-dimensions-and-specifications": {
+        "type": "string",
+        "title": "Casing Dimensions and Specifications",
+        "default": "Default Value Setting"
+      },
+      "drive-bays-and-expansion-slots-/-ports": {
+        "type": "string",
+        "title": "Drive Bays and Expansion Slots / Ports",
+        "default": "Default Value Setting"
+      },
+      "power-supply": {
+        "type": "string",
+        "title": "Power Supply",
+        "default": "Default Value Setting"
+      }
+    },
+    "required": [
+      "case-cooling",
+      "casing-dimensions-and-specifications",
+      "drive-bays-and-expansion-slots-/-ports",
+      "power-supply"
+    ]
+  },
+  "uiSchema": {
+    "case-cooling": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "casing-dimensions-and-specifications": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "drive-bays-and-expansion-slots-/-ports": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "power-supply": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "formSchema": {
+    "title": "Coolers",
+    "type": "object",
+    "properties": {
+      "acoustic-noise": {
+        "type": "string",
+        "title": "Acoustic Noise",
+        "default": "Default Value Setting"
+      },
+      "bearing-type": {
+        "type": "string",
+        "title": "Bearing Type",
+        "default": "Default Value Setting"
+      },
+      "cpu-/-gfx-support": {
+        "type": "string",
+        "title": "CPU / GFX Support",
+        "default": "Default Value Setting"
+      },
+      "dimensions": {
+        "type": "string",
+        "title": "Dimensions",
+        "default": "Default Value Setting"
+      },
+      "fan-/-power-connector": {
+        "type": "string",
+        "title": "Fan / Power Connector",
+        "default": "Default Value Setting"
+      },
+      "fan-specs": {
+        "type": "string",
+        "title": "Fan Specs",
+        "default": "Default Value Setting"
+      },
+      "liquid-coolant-type": {
+        "type": "string",
+        "title": "Liquid Coolant Type",
+        "default": "Default Value Setting"
+      },
+      "materials": {
+        "type": "string",
+        "title": "Materials",
+        "default": "Default Value Setting"
+      },
+      "max.-airflow-rate": {
+        "type": "string",
+        "title": "Max. Airflow Rate",
+        "default": "Default Value Setting"
+      },
+      "mtbf": {
+        "type": "string",
+        "title": "MTBF",
+        "default": "Default Value Setting"
+      },
+      "operating-voltage": {
+        "type": "string",
+        "title": "Operating Voltage",
+        "default": "Default Value Setting"
+      },
+      "weight": {
+        "type": "string",
+        "title": "Weight",
+        "default": "Default Value Setting"
+      }
+    },
+    "required": [
+      "acoustic-noise",
+      "bearing-type",
+      "cpu-/-gfx-support",
+      "dimensions",
+      "fan-/-power-connector",
+      "fan-specs",
+      "liquid-coolant-type",
+      "materials",
+      "max.-airflow-rate",
+      "mtbf",
+      "operating-voltage",
+      "weight"
+    ]
+  },
+  "uiSchema": {
+    "acoustic-noise": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "bearing-type": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "cpu-/-gfx-support": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "dimensions": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "fan-/-power-connector": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "fan-specs": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "liquid-coolant-type": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "materials": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "max.-airflow-rate": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "mtbf": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "operating-voltage": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    },
+    "weight": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 2
+      }
+    }
+  }
+}
