@@ -1,0 +1,51 @@
+{
+  "formSchema": {
+    "title": "Apps & Software",
+    "type": "object",
+    "properties": {
+      "features": {
+        "type": "string",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "apps-&-software"
+      },
+      "operating-system-support": {
+        "type": "string",
+        "fieldKey": "operating-system-support",
+        "fieldlabel": "Operating System Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "apps-&-software"
+      },
+      "other-box-contents": {
+        "type": "string",
+        "fieldKey": "other-box-contents",
+        "fieldlabel": "Other Box Contents",
+        "specificationType": "specifications",
+        "categoryUniqueName": "apps-&-software"
+      },
+      "software-support-/-subscription": {
+        "type": "string",
+        "fieldKey": "software-support-/-subscription",
+        "fieldlabel": "Software Support / Subscription",
+        "specificationType": "specifications",
+        "categoryUniqueName": "apps-&-software"
+      },
+      "system-requirements": {
+        "type": "string",
+        "fieldKey": "system-requirements",
+        "fieldlabel": "System Requirements",
+        "specificationType": "specifications",
+        "categoryUniqueName": "apps-&-software"
+      }
+    },
+    "required": [
+      "features",
+      "operating-system-support",
+      "other-box-contents",
+      "software-support-/-subscription",
+      "system-requirements"
+    ]
+  },
+  "uiSchema": {}
+}

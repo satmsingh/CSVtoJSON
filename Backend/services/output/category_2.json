@@ -1,0 +1,131 @@
+{
+  "formSchema": {
+    "title": "AV Systems",
+    "type": "object",
+    "properties": {
+      "amplifier-type": {
+        "type": "string",
+        "fieldKey": "amplifier-type",
+        "fieldlabel": "Amplifier Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "audio-format-support": {
+        "type": "string",
+        "fieldKey": "audio-format-support",
+        "fieldlabel": "Audio Format Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "dock-system-&-compatibility": {
+        "type": "string",
+        "fieldKey": "dock-system-&-compatibility",
+        "fieldlabel": "Dock System & Compatibility",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "driver-unit": {
+        "type": "string",
+        "fieldKey": "driver-unit",
+        "fieldlabel": "Driver Unit",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "frequency-range": {
+        "type": "string",
+        "fieldKey": "frequency-range",
+        "fieldlabel": "Frequency Range",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "i/o-ports": {
+        "type": "string",
+        "fieldKey": "i/o-ports",
+        "fieldlabel": "I/O Ports",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "model-/-specs": {
+        "type": "string",
+        "fieldKey": "model-/-specs",
+        "fieldlabel": "Model / Specs",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "power": {
+        "type": "string",
+        "fieldKey": "power",
+        "fieldlabel": "Power",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "power-output": {
+        "type": "string",
+        "fieldKey": "power-output",
+        "fieldlabel": "Power Output",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "remote-control": {
+        "type": "string",
+        "fieldKey": "remote-control",
+        "fieldlabel": "Remote Control",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "video-format-support": {
+        "type": "string",
+        "fieldKey": "video-format-support",
+        "fieldlabel": "Video Format Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      },
+      "wireless-connectivity": {
+        "type": "string",
+        "fieldKey": "wireless-connectivity",
+        "fieldlabel": "Wireless Connectivity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "av-systems"
+      }
+    },
+    "required": [
+      "amplifier-type",
+      "audio-format-support",
+      "dimensions",
+      "dock-system-&-compatibility",
+      "driver-unit",
+      "frequency-range",
+      "i/o-ports",
+      "model-/-specs",
+      "other-features",
+      "power",
+      "power-output",
+      "remote-control",
+      "video-format-support",
+      "weight",
+      "wireless-connectivity"
+    ]
+  },
+  "uiSchema": {}
+}

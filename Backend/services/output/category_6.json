@@ -1,0 +1,114 @@
+{
+  "formSchema": {
+    "title": "Coolers",
+    "type": "object",
+    "properties": {
+      "acoustic-noise": {
+        "type": "string",
+        "fieldKey": "acoustic-noise",
+        "fieldlabel": "Acoustic Noise",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "bearing-type": {
+        "type": "string",
+        "fieldKey": "bearing-type",
+        "fieldlabel": "Bearing Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "cpu-/-gfx-support": {
+        "type": "string",
+        "fieldKey": "cpu-/-gfx-support",
+        "fieldlabel": "CPU / GFX Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "fan-/-power-connector": {
+        "type": "string",
+        "fieldKey": "fan-/-power-connector",
+        "fieldlabel": "Fan / Power Connector",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "fan-specs": {
+        "type": "string",
+        "fieldKey": "fan-specs",
+        "fieldlabel": "Fan Specs",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "liquid-coolant-type": {
+        "type": "string",
+        "fieldKey": "liquid-coolant-type",
+        "fieldlabel": "Liquid Coolant Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "materials": {
+        "type": "string",
+        "fieldKey": "materials",
+        "fieldlabel": "Materials",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "max.-airflow-rate": {
+        "type": "string",
+        "fieldKey": "max.-airflow-rate",
+        "fieldlabel": "Max. Airflow Rate",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "mtbf": {
+        "type": "string",
+        "fieldKey": "mtbf",
+        "fieldlabel": "MTBF",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "operating-voltage": {
+        "type": "string",
+        "fieldKey": "operating-voltage",
+        "fieldlabel": "Operating Voltage",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "coolers"
+      }
+    },
+    "required": [
+      "acoustic-noise",
+      "bearing-type",
+      "cpu-/-gfx-support",
+      "dimensions",
+      "fan-/-power-connector",
+      "fan-specs",
+      "liquid-coolant-type",
+      "materials",
+      "max.-airflow-rate",
+      "mtbf",
+      "operating-voltage",
+      "weight"
+    ]
+  },
+  "uiSchema": {
+    "materials": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 6
+      }
+    }
+  }
+}

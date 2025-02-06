@@ -1,0 +1,100 @@
+{
+  "formSchema": {
+    "title": "Bluetooth Headsets",
+    "type": "object",
+    "properties": {
+      "bluetooth-profiles": {
+        "type": "string",
+        "fieldKey": "bluetooth-profiles",
+        "fieldlabel": "Bluetooth Profiles",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "frequency-range": {
+        "type": "string",
+        "fieldKey": "frequency-range",
+        "fieldlabel": "Frequency range",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "interface": {
+        "type": "string",
+        "fieldKey": "interface",
+        "fieldlabel": "Interface",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "microphone": {
+        "type": "string",
+        "fieldKey": "microphone",
+        "fieldlabel": "Microphone",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "radio": {
+        "type": "string",
+        "fieldKey": "radio",
+        "fieldlabel": "Radio",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "range": {
+        "type": "string",
+        "fieldKey": "range",
+        "fieldlabel": "Range",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "standby-time": {
+        "type": "string",
+        "fieldKey": "standby-time",
+        "fieldlabel": "Standby time",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "talk-time": {
+        "type": "string",
+        "fieldKey": "talk-time",
+        "fieldlabel": "Talk time",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "bluetooth-headsets"
+      }
+    },
+    "required": [
+      "bluetooth-profiles",
+      "dimensions",
+      "frequency-range",
+      "interface",
+      "microphone",
+      "other-features",
+      "radio",
+      "radio",
+      "range",
+      "standby-time",
+      "talk-time",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}
