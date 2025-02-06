@@ -41,34 +41,9 @@ function parseValueSpecs(valueSpecs) {
     return specs;
 }
 
-// Get UI widget configuration based on specs
-function getUIWidget(fieldName, uiSpecs, valueSpecs) {
-    const defaultWidget = {
-        "ui:widget": "textarea",
-        "ui:options": { rows: 2 }
-    };
-
-    // Check for specific UI configuration in Specs UI
-    if (uiSpecs[fieldName]) {
-        const value = uiSpecs[fieldName];
-        if (value.toLowerCase().includes('rows')) {
-            return {
-                "ui:widget": "textarea",
-                "ui:options": { rows: parseInt(value.match(/\d+/)[0]) || 2 }
-            };
-        }
-    }
-
-    // Check for specific value configuration in Specs values
-    if (valueSpecs[fieldName]) {
-        const value = valueSpecs[fieldName].toLowerCase();
-        if (value.includes('yes/no')) {
-            return { "ui:widget": "select" };
-        }
-        // Add more value-based widget configurations here
-    }
-
-    return defaultWidget;
+// Format category unique name
+function formatCategoryUniqueName(category) {
+    return category.toLowerCase().replace(/\s+/g, '-');
 }
 
 // Process Excel file and generate JSON
@@ -101,6 +76,8 @@ async function processExcel(filePath) {
             return;
         }
 
+        const categoryUniqueName = formatCategoryUniqueName(productCategory);
+
         // Create JSON for Specs (Product Category)
         let specsSchema = {
             formSchema: {
@@ -124,44 +101,59 @@ async function processExcel(filePath) {
 
         // Process Spec fields
         specsFields.forEach((field) => {
-            const fieldName = field.toLowerCase().replace(/\s+/g, "-");
-            specsSchema.formSchema.properties[fieldName] = {
+            const fieldName = field.toLowerCase().replace(/\s+/g, '-');
+            const baseProperties = {
                 type: "string",
-                title: field
+                fieldKey: fieldName,
+                fieldlabel: field,
+                specificationType: "specifications",
+                categoryUniqueName: categoryUniqueName
             };
 
-            // Add specific value configuration if available
-            if (valueSpecs[fieldName]) {
-                if (valueSpecs[fieldName].toLowerCase() === 'yes/no selection') {
-                    specsSchema.formSchema.properties[fieldName] = {
-                        type: "string",
-                        title: field,
-                        enum: ["Yes", "No"],
-                        default: "No"  // Adding a default value
-                    };
-                    specsSchema.uiSchema[fieldName] = {
-                        "ui:widget": "select",
-                        "ui:options": {
-                            enumOptions: [
-                                { label: "Yes", value: "Yes" },
-                                { label: "No", value: "No" }
-                            ]
-                        }
-                    };
-                    return; // Skip the default UI schema assignment
-                }
+            // Check for Yes/No selection
+            if (valueSpecs[fieldName] && valueSpecs[fieldName].toLowerCase() === 'yes/no selection') {
+                specsSchema.formSchema.properties[fieldName] = {
+                    ...baseProperties,
+                    enum: ["Yes", "No"],
+                    default: "No"
+                };
+                specsSchema.uiSchema[fieldName] = {
+                    "ui:widget": "select",
+                    "ui:options": {
+                        enumOptions: [
+                            { label: "Yes", value: "Yes" },
+                            { label: "No", value: "No" }
+                        ]
+                    }
+                };
+            } 
+            // Check for specific row count
+            else if (uiSpecs[fieldName] && uiSpecs[fieldName].toLowerCase().includes('rows')) {
+                specsSchema.formSchema.properties[fieldName] = baseProperties;
+                specsSchema.uiSchema[fieldName] = {
+                    "ui:widget": "textarea",
+                    "ui:options": {
+                        rows: parseInt(uiSpecs[fieldName].match(/\d+/)[0]) || 2
+                    }
+                };
+            }
+            // Default case - no UI Schema
+            else {
+                specsSchema.formSchema.properties[fieldName] = baseProperties;
             }
 
             specsSchema.formSchema.required.push(fieldName);
-            specsSchema.uiSchema[fieldName] = getUIWidget(fieldName, uiSpecs, valueSpecs);
         });
 
         // Process Ratings fields
         ratingsFields.forEach((field) => {
-            const fieldName = field.toLowerCase().replace(/\s+/g, "-");
+            const fieldName = field.toLowerCase().replace(/\s+/g, '-');
             productSchema.formSchema.properties[fieldName] = {
                 type: "number",
-                title: field,
+                fieldKey: fieldName,
+                fieldlabel: field,
+                specificationType: "ratings",
+                categoryUniqueName: categoryUniqueName,
                 enum: ratingEnum
             };
             productSchema.formSchema.required.push(fieldName);
