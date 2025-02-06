@@ -5,23 +5,19 @@
     "properties": {
       "case-cooling": {
         "type": "string",
-        "title": "Case Cooling",
-        "default": "Default Value Setting"
+        "title": "Case Cooling"
       },
       "casing-dimensions-and-specifications": {
         "type": "string",
-        "title": "Casing Dimensions and Specifications",
-        "default": "Default Value Setting"
+        "title": "Casing Dimensions and Specifications"
       },
       "drive-bays-and-expansion-slots-/-ports": {
         "type": "string",
-        "title": "Drive Bays and Expansion Slots / Ports",
-        "default": "Default Value Setting"
+        "title": "Drive Bays and Expansion Slots / Ports"
       },
       "power-supply": {
         "type": "string",
-        "title": "Power Supply",
-        "default": "Default Value Setting"
+        "title": "Power Supply"
       }
     },
     "required": [

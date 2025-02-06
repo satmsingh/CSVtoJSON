@@ -5,63 +5,51 @@
     "properties": {
       "acoustic-noise": {
         "type": "string",
-        "title": "Acoustic Noise",
-        "default": "Default Value Setting"
+        "title": "Acoustic Noise"
       },
       "bearing-type": {
         "type": "string",
-        "title": "Bearing Type",
-        "default": "Default Value Setting"
+        "title": "Bearing Type"
       },
       "cpu-/-gfx-support": {
         "type": "string",
-        "title": "CPU / GFX Support",
-        "default": "Default Value Setting"
+        "title": "CPU / GFX Support"
       },
       "dimensions": {
         "type": "string",
-        "title": "Dimensions",
-        "default": "Default Value Setting"
+        "title": "Dimensions"
       },
       "fan-/-power-connector": {
         "type": "string",
-        "title": "Fan / Power Connector",
-        "default": "Default Value Setting"
+        "title": "Fan / Power Connector"
       },
       "fan-specs": {
         "type": "string",
-        "title": "Fan Specs",
-        "default": "Default Value Setting"
+        "title": "Fan Specs"
       },
       "liquid-coolant-type": {
         "type": "string",
-        "title": "Liquid Coolant Type",
-        "default": "Default Value Setting"
+        "title": "Liquid Coolant Type"
       },
       "materials": {
         "type": "string",
-        "title": "Materials",
-        "default": "Default Value Setting"
+        "title": "Materials"
       },
       "max.-airflow-rate": {
         "type": "string",
-        "title": "Max. Airflow Rate",
-        "default": "Default Value Setting"
+        "title": "Max. Airflow Rate"
       },
       "mtbf": {
         "type": "string",
-        "title": "MTBF",
-        "default": "Default Value Setting"
+        "title": "MTBF"
       },
       "operating-voltage": {
         "type": "string",
-        "title": "Operating Voltage",
-        "default": "Default Value Setting"
+        "title": "Operating Voltage"
       },
       "weight": {
         "type": "string",
-        "title": "Weight",
-        "default": "Default Value Setting"
+        "title": "Weight"
       }
     },
     "required": [
@@ -125,7 +113,7 @@
     "materials": {
       "ui:widget": "textarea",
       "ui:options": {
-        "rows": 2
+        "rows": 6
       }
     },
     "max.-airflow-rate": {

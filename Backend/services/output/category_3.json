@@ -5,53 +5,43 @@
     "properties": {
       "audio-format-support": {
         "type": "string",
-        "title": "Audio Format Support",
-        "default": "Default Value Setting"
+        "title": "Audio Format Support"
       },
       "blu-ray-standard": {
         "type": "string",
-        "title": "Blu-ray Standard",
-        "default": "Default Value Setting"
+        "title": "Blu-ray Standard"
       },
       "dimensions": {
         "type": "string",
-        "title": "Dimensions",
-        "default": "Default Value Setting"
+        "title": "Dimensions"
       },
       "i/o-ports": {
         "type": "string",
-        "title": "I/O Ports",
-        "default": "Default Value Setting"
+        "title": "I/O Ports"
       },
       "internal-storage": {
         "type": "string",
-        "title": "Internal Storage",
-        "default": "Default Value Setting"
+        "title": "Internal Storage"
       },
       "network-connectivity": {
         "type": "string",
-        "title": "Network Connectivity",
-        "default": "Default Value Setting"
+        "title": "Network Connectivity"
       },
       "other-features": {
         "type": "string",
-        "title": "Other features",
-        "default": "Default Value Setting"
+        "title": "Other features"
       },
       "power": {
         "type": "string",
-        "title": "Power",
-        "default": "Default Value Setting"
+        "title": "Power"
       },
       "video-format-support": {
         "type": "string",
-        "title": "Video Format Support",
-        "default": "Default Value Setting"
+        "title": "Video Format Support"
       },
       "weight": {
         "type": "string",
-        "title": "Weight",
-        "default": "Default Value Setting"
+        "title": "Weight"
       }
     },
     "required": [

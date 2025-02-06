@@ -5,28 +5,23 @@
     "properties": {
       "features": {
         "type": "string",
-        "title": "Features",
-        "default": "Most fields are free text fields, unless stated otherwise below."
+        "title": "Features"
       },
       "operating-system-support": {
         "type": "string",
-        "title": "Operating System Support",
-        "default": "Most fields are free text fields, unless stated otherwise below."
+        "title": "Operating System Support"
       },
       "other-box-contents": {
         "type": "string",
-        "title": "Other Box Contents",
-        "default": "Most fields are free text fields, unless stated otherwise below."
+        "title": "Other Box Contents"
       },
       "software-support-/-subscription": {
         "type": "string",
-        "title": "Software Support / Subscription",
-        "default": "Most fields are free text fields, unless stated otherwise below."
+        "title": "Software Support / Subscription"
       },
       "system-requirements": {
         "type": "string",
-        "title": "System Requirements",
-        "default": "Most fields are free text fields, unless stated otherwise below."
+        "title": "System Requirements"
       }
     },
     "required": [

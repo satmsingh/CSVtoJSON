@@ -5,58 +5,47 @@
     "properties": {
       "bluetooth-profiles": {
         "type": "string",
-        "title": "Bluetooth Profiles",
-        "default": "Default Value Setting"
+        "title": "Bluetooth Profiles"
       },
       "dimensions": {
         "type": "string",
-        "title": "Dimensions",
-        "default": "Default Value Setting"
+        "title": "Dimensions"
       },
       "frequency-range": {
         "type": "string",
-        "title": "Frequency range",
-        "default": "Default Value Setting"
+        "title": "Frequency range"
       },
       "interface": {
         "type": "string",
-        "title": "Interface",
-        "default": "Default Value Setting"
+        "title": "Interface"
       },
       "microphone": {
         "type": "string",
-        "title": "Microphone",
-        "default": "Default Value Setting"
+        "title": "Microphone"
       },
       "other-features": {
         "type": "string",
-        "title": "Other Features",
-        "default": "Default Value Setting"
+        "title": "Other Features"
       },
       "radio": {
         "type": "string",
-        "title": "Radio",
-        "default": "Default Value Setting"
+        "title": "Radio"
       },
       "range": {
         "type": "string",
-        "title": "Range",
-        "default": "Default Value Setting"
+        "title": "Range"
       },
       "standby-time": {
         "type": "string",
-        "title": "Standby time",
-        "default": "Default Value Setting"
+        "title": "Standby time"
       },
       "talk-time": {
         "type": "string",
-        "title": "Talk time",
-        "default": "Default Value Setting"
+        "title": "Talk time"
       },
       "weight": {
         "type": "string",
-        "title": "Weight",
-        "default": "Default Value Setting"
+        "title": "Weight"
       }
     },
     "required": [

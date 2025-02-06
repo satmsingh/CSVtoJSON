@@ -5,58 +5,52 @@
     "properties": {
       "buffer-size": {
         "type": "string",
-        "title": "Buffer Size",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Buffer Size"
       },
       "drive-capacity": {
         "type": "string",
-        "title": "Drive Capacity",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Drive Capacity"
       },
       "drive-configuration": {
         "type": "string",
-        "title": "Drive Configuration",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Drive Configuration"
       },
       "drive-type": {
         "type": "string",
-        "title": "Drive Type",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Drive Type"
       },
       "general-dimensions": {
         "type": "string",
-        "title": "General Dimensions",
-        "default": "Power Connector = Yes/No selection"
+        "title": "General Dimensions"
       },
       "interface-type": {
         "type": "string",
-        "title": "Interface Type",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Interface Type"
       },
       "other-features": {
         "type": "string",
-        "title": "Other Features",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Other Features"
       },
       "power-connector": {
         "type": "string",
         "title": "Power Connector",
-        "default": "Power Connector = Yes/No selection"
+        "enum": [
+          "Yes",
+          "No"
+        ],
+        "default": "No"
       },
       "spindle-speed": {
         "type": "string",
-        "title": "Spindle Speed",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Spindle Speed"
       },
       "warranty": {
         "type": "string",
-        "title": "Warranty",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Warranty"
       },
       "weight": {
         "type": "string",
-        "title": "Weight",
-        "default": "Power Connector = Yes/No selection"
+        "title": "Weight"
       }
     },
     "required": [
@@ -67,7 +61,6 @@
       "general-dimensions",
       "interface-type",
       "other-features",
-      "power-connector",
       "spindle-speed",
       "warranty",
       "weight"
@@ -117,9 +110,18 @@
       }
     },
     "power-connector": {
-      "ui:widget": "textarea",
+      "ui:widget": "select",
       "ui:options": {
-        "rows": 2
+        "enumOptions": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ]
       }
     },
     "spindle-speed": {

@@ -5,78 +5,63 @@
     "properties": {
       "amplifier-type": {
         "type": "string",
-        "title": "Amplifier Type",
-        "default": "Default Value Setting"
+        "title": "Amplifier Type"
       },
       "audio-format-support": {
         "type": "string",
-        "title": "Audio Format Support",
-        "default": "Default Value Setting"
+        "title": "Audio Format Support"
       },
       "dimensions": {
         "type": "string",
-        "title": "Dimensions",
-        "default": "Default Value Setting"
+        "title": "Dimensions"
       },
       "dock-system-&-compatibility": {
         "type": "string",
-        "title": "Dock System & Compatibility",
-        "default": "Default Value Setting"
+        "title": "Dock System & Compatibility"
       },
       "driver-unit": {
         "type": "string",
-        "title": "Driver Unit",
-        "default": "Default Value Setting"
+        "title": "Driver Unit"
       },
       "frequency-range": {
         "type": "string",
-        "title": "Frequency Range",
-        "default": "Default Value Setting"
+        "title": "Frequency Range"
       },
       "i/o-ports": {
         "type": "string",
-        "title": "I/O Ports",
-        "default": "Default Value Setting"
+        "title": "I/O Ports"
       },
       "model-/-specs": {
         "type": "string",
-        "title": "Model / Specs",
-        "default": "Default Value Setting"
+        "title": "Model / Specs"
       },
       "other-features": {
         "type": "string",
-        "title": "Other features",
-        "default": "Default Value Setting"
+        "title": "Other features"
       },
       "power": {
         "type": "string",
-        "title": "Power",
-        "default": "Default Value Setting"
+        "title": "Power"
       },
       "power-output": {
         "type": "string",
-        "title": "Power Output",
-        "default": "Default Value Setting"
+        "title": "Power Output"
       },
       "remote-control": {
         "type": "string",
-        "title": "Remote Control",
-        "default": "Default Value Setting"
+        "title": "Remote Control"
       },
       "video-format-support": {
         "type": "string",
-        "title": "Video Format Support",
-        "default": "Default Value Setting"
+        "title": "Video Format Support"
       },
       "weight": {
         "type": "string",
-        "title": "Weight",
-        "default": "Default Value Setting"
+        "title": "Weight"
       },
       "wireless-connectivity": {
         "type": "string",
-        "title": "Wireless Connectivity",
-        "default": "Default Value Setting"
+        "title": "Wireless Connectivity"
       }
     },
     "required": [

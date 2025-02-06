@@ -5,63 +5,51 @@
     "properties": {
       "audio": {
         "type": "string",
-        "title": "Audio",
-        "default": "Default Value Setting"
+        "title": "Audio"
       },
       "dimensions": {
         "type": "string",
-        "title": "Dimensions",
-        "default": "Default Value Setting"
+        "title": "Dimensions"
       },
       "display": {
         "type": "string",
-        "title": "Display",
-        "default": "Default Value Setting"
+        "title": "Display"
       },
       "i/o-ports": {
         "type": "string",
-        "title": "I/O Ports",
-        "default": "Default Value Setting"
+        "title": "I/O Ports"
       },
       "memory": {
         "type": "string",
-        "title": "Memory",
-        "default": "Default Value Setting"
+        "title": "Memory"
       },
       "networking-/-communication": {
         "type": "string",
-        "title": "Networking / Communication",
-        "default": "Default Value Setting"
+        "title": "Networking / Communication"
       },
       "operating-system": {
         "type": "string",
-        "title": "Operating System",
-        "default": "Default Value Setting"
+        "title": "Operating System"
       },
       "optical-drive": {
         "type": "string",
-        "title": "Optical Drive",
-        "default": "Default Value Setting"
+        "title": "Optical Drive"
       },
       "processor-and-chipset": {
         "type": "string",
-        "title": "Processor and Chipset",
-        "default": "Default Value Setting"
+        "title": "Processor and Chipset"
       },
       "storage": {
         "type": "string",
-        "title": "Storage",
-        "default": "Default Value Setting"
+        "title": "Storage"
       },
       "video": {
         "type": "string",
-        "title": "Video",
-        "default": "Default Value Setting"
+        "title": "Video"
       },
       "weight": {
         "type": "string",
-        "title": "Weight",
-        "default": "Default Value Setting"
+        "title": "Weight"
       }
     },
     "required": [
