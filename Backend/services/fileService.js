@@ -3,12 +3,16 @@ const fs = require("fs");
 const path = require("path");
 
 const outputDir = path.join(__dirname, "output");
+const categoryDir = path.join(outputDir, "category");
+const ratingsDir = path.join(outputDir, "ratings");
 
-// Ensure output directory exists
-if (!fs.existsSync(outputDir)) {
-    console.log("Creating output directory...");
-    fs.mkdirSync(outputDir, { recursive: true });
-}
+// Ensure output directories exist
+[outputDir, categoryDir, ratingsDir].forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+        console.log(`Creating directory: ${dir}`);
+        fs.mkdirSync(dir, { recursive: true });
+    }
+});
 
 // Default rating enum values
 const ratingEnum = [0, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0];
@@ -16,7 +20,6 @@ const ratingEnum = [0, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.
 // Parse UI specifications from Specs UI column
 function parseUISpecs(uiSpecs) {
     if (!uiSpecs) return {};
-    
     const specs = {};
     uiSpecs.split('\n').forEach(spec => {
         const [field, value] = spec.split('=').map(s => s.trim());
@@ -30,7 +33,6 @@ function parseUISpecs(uiSpecs) {
 // Parse values specifications from Specs values column
 function parseValueSpecs(valueSpecs) {
     if (!valueSpecs) return {};
-    
     const specs = {};
     valueSpecs.split('\n').forEach(spec => {
         const [field, value] = spec.split('=').map(s => s.trim());
@@ -55,22 +57,19 @@ async function processExcel(filePath) {
     const sheet = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
     console.log(`Total rows found: ${sheet.length}`);
-
     let outputFiles = [];
 
     sheet.forEach((row, index) => {
         console.log(`Processing row ${index + 1}:`, row);
 
-        // Extract fields with fallbacks
         const productCategory = row["Product Category"] || "Unknown Category";
         const productName = row["Product Name"] || `Unknown Product ${index + 1}`;
         const specsFields = row["Specs fields"] ? row["Specs fields"].split("\r\n") : [];
         const ratingsFields = row["Ratings fields"] ? row["Ratings fields"].split("\r\n") : [];
-        
-        // Parse UI and value specifications
+
         const uiSpecs = parseUISpecs(row["Specs UI"]);
         const valueSpecs = parseValueSpecs(row["Specs values"]);
-
+        
         if (specsFields.length === 0 && ratingsFields.length === 0) {
             console.warn(`Skipping row ${index + 1} due to missing Specs and Ratings fields.`);
             return;
@@ -78,7 +77,6 @@ async function processExcel(filePath) {
 
         const categoryUniqueName = formatCategoryUniqueName(productCategory);
 
-        // Create JSON for Specs (Product Category)
         let specsSchema = {
             formSchema: {
                 title: productCategory,
@@ -110,7 +108,6 @@ async function processExcel(filePath) {
                 categoryUniqueName: categoryUniqueName
             };
 
-            // Check for Yes/No selection
             if (valueSpecs[fieldName] && valueSpecs[fieldName].toLowerCase() === 'yes/no selection') {
                 specsSchema.formSchema.properties[fieldName] = {
                     ...baseProperties,
@@ -126,9 +123,7 @@ async function processExcel(filePath) {
                         ]
                     }
                 };
-            } 
-            // Check for specific row count
-            else if (uiSpecs[fieldName] && uiSpecs[fieldName].toLowerCase().includes('rows')) {
+            } else if (uiSpecs[fieldName] && uiSpecs[fieldName].toLowerCase().includes('rows')) {
                 specsSchema.formSchema.properties[fieldName] = baseProperties;
                 specsSchema.uiSchema[fieldName] = {
                     "ui:widget": "textarea",
@@ -136,9 +131,7 @@ async function processExcel(filePath) {
                         rows: parseInt(uiSpecs[fieldName].match(/\d+/)[0]) || 2
                     }
                 };
-            }
-            // Default case - no UI Schema
-            else {
+            } else {
                 specsSchema.formSchema.properties[fieldName] = baseProperties;
             }
 
@@ -160,9 +153,8 @@ async function processExcel(filePath) {
             productSchema.uiSchema[fieldName] = { "ui:widget": "select" };
         });
 
-        // Define file paths
-        const categoryFilePath = path.join(outputDir, `category_${index + 1}.json`);
-        const productFilePath = path.join(outputDir, `product_${index + 1}.json`);
+        const categoryFilePath = path.join(categoryDir, `category_${index + 1}.json`);
+        const productFilePath = path.join(ratingsDir, `product_${index + 1}.json`);
 
         console.log("Writing category JSON to:", categoryFilePath);
         console.log("Writing product JSON to:", productFilePath);
