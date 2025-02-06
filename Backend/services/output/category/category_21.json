@@ -1,0 +1,126 @@
+{
+  "formSchema": {
+    "title": "Motherboard",
+    "type": "object",
+    "properties": {
+      "audio": {
+        "type": "string",
+        "fieldKey": "audio",
+        "fieldlabel": "Audio",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "expansion-slots": {
+        "type": "string",
+        "fieldKey": "expansion-slots",
+        "fieldlabel": "Expansion Slots",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "firewire-(ieee-1394)": {
+        "type": "string",
+        "fieldKey": "firewire-(ieee-1394)",
+        "fieldlabel": "FireWire (IEEE 1394)",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "form-factor": {
+        "type": "string",
+        "fieldKey": "form-factor",
+        "fieldlabel": "Form Factor",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "internal-connectors": {
+        "type": "string",
+        "fieldKey": "internal-connectors",
+        "fieldlabel": "Internal Connectors",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "memory": {
+        "type": "string",
+        "fieldKey": "memory",
+        "fieldlabel": "Memory",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "networking": {
+        "type": "string",
+        "fieldKey": "networking",
+        "fieldlabel": "Networking",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "processor-support-and-chipset-type": {
+        "type": "string",
+        "fieldKey": "processor-support-and-chipset-type",
+        "fieldlabel": "Processor Support and Chipset Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "rear-i/o": {
+        "type": "string",
+        "fieldKey": "rear-i/o",
+        "fieldlabel": "Rear I/O",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "storage": {
+        "type": "string",
+        "fieldKey": "storage",
+        "fieldlabel": "Storage",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      },
+      "video": {
+        "type": "string",
+        "fieldKey": "video",
+        "fieldlabel": "Video",
+        "specificationType": "specifications",
+        "categoryUniqueName": "motherboard"
+      }
+    },
+    "required": [
+      "audio",
+      "expansion-slots",
+      "firewire-(ieee-1394)",
+      "form-factor",
+      "internal-connectors",
+      "memory",
+      "networking",
+      "other-features",
+      "processor-support-and-chipset-type",
+      "rear-i/o",
+      "storage",
+      "video"
+    ]
+  },
+  "uiSchema": {
+    "audio": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    },
+    "internal-connectors": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      }
+    },
+    "video": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      }
+    }
+  }
+}

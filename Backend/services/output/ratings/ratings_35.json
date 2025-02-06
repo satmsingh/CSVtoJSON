@@ -1,0 +1,210 @@
+{
+  "formSchema": {
+    "title": "Televisions",
+    "type": "object",
+    "properties": {
+      "3d-performance": {
+        "type": "number",
+        "fieldKey": "3d-performance",
+        "fieldlabel": "3D Performance",
+        "specificationType": "ratings",
+        "categoryUniqueName": "televisions",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "design": {
+        "type": "number",
+        "fieldKey": "design",
+        "fieldlabel": "Design",
+        "specificationType": "ratings",
+        "categoryUniqueName": "televisions",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "features": {
+        "type": "number",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "ratings",
+        "categoryUniqueName": "televisions",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "hd-performance": {
+        "type": "number",
+        "fieldKey": "hd-performance",
+        "fieldlabel": "HD Performance",
+        "specificationType": "ratings",
+        "categoryUniqueName": "televisions",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "sd-performance": {
+        "type": "number",
+        "fieldKey": "sd-performance",
+        "fieldlabel": "SD Performance",
+        "specificationType": "ratings",
+        "categoryUniqueName": "televisions",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "value": {
+        "type": "number",
+        "fieldKey": "value",
+        "fieldlabel": "Value",
+        "specificationType": "ratings",
+        "categoryUniqueName": "televisions",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    "required": [
+      "3d-performance",
+      "design",
+      "features",
+      "hd-performance",
+      "sd-performance",
+      "value"
+    ]
+  },
+  "uiSchema": {
+    "3d-performance": {
+      "ui:widget": "select"
+    },
+    "design": {
+      "ui:widget": "select"
+    },
+    "features": {
+      "ui:widget": "select"
+    },
+    "hd-performance": {
+      "ui:widget": "select"
+    },
+    "sd-performance": {
+      "ui:widget": "select"
+    },
+    "value": {
+      "ui:widget": "select"
+    }
+  }
+}

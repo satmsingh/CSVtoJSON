@@ -1,0 +1,99 @@
+{
+  "formSchema": {
+    "title": "Portable Media Players",
+    "type": "object",
+    "properties": {
+      "audio-format-support": {
+        "type": "string",
+        "fieldKey": "audio-format-support",
+        "fieldlabel": "Audio Format Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "built-in-memory": {
+        "type": "string",
+        "fieldKey": "built-in-memory",
+        "fieldlabel": "Built-in Memory",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "display": {
+        "type": "string",
+        "fieldKey": "display",
+        "fieldlabel": "Display",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "i/o-ports": {
+        "type": "string",
+        "fieldKey": "i/o-ports",
+        "fieldlabel": "I/O Ports",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "processor": {
+        "type": "string",
+        "fieldKey": "processor",
+        "fieldlabel": "Processor",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "storage-type": {
+        "type": "string",
+        "fieldKey": "storage-type",
+        "fieldlabel": "Storage Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "video-format-support": {
+        "type": "string",
+        "fieldKey": "video-format-support",
+        "fieldlabel": "Video Format Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      },
+      "wireless-connectivity": {
+        "type": "string",
+        "fieldKey": "wireless-connectivity",
+        "fieldlabel": "Wireless Connectivity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "portable-media-players"
+      }
+    },
+    "required": [
+      "audio-format-support",
+      "built-in-memory",
+      "dimensions",
+      "display",
+      "i/o-ports",
+      "other-features",
+      "processor",
+      "storage-type",
+      "video-format-support",
+      "weight",
+      "wireless-connectivity"
+    ]
+  },
+  "uiSchema": {}
+}

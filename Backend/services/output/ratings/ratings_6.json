@@ -1,0 +1,144 @@
+{
+  "formSchema": {
+    "title": "Coolers",
+    "type": "object",
+    "properties": {
+      "design": {
+        "type": "number",
+        "fieldKey": "design",
+        "fieldlabel": "Design",
+        "specificationType": "ratings",
+        "categoryUniqueName": "coolers",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "features": {
+        "type": "number",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "ratings",
+        "categoryUniqueName": "coolers",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "performance": {
+        "type": "number",
+        "fieldKey": "performance",
+        "fieldlabel": "Performance",
+        "specificationType": "ratings",
+        "categoryUniqueName": "coolers",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "value": {
+        "type": "number",
+        "fieldKey": "value",
+        "fieldlabel": "Value",
+        "specificationType": "ratings",
+        "categoryUniqueName": "coolers",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    "required": [
+      "design",
+      "features",
+      "performance",
+      "value"
+    ]
+  },
+  "uiSchema": {
+    "design": {
+      "ui:widget": "select"
+    },
+    "features": {
+      "ui:widget": "select"
+    },
+    "performance": {
+      "ui:widget": "select"
+    },
+    "value": {
+      "ui:widget": "select"
+    }
+  }
+}

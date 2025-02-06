@@ -1,0 +1,155 @@
+{
+  "formSchema": {
+    "title": "Headphones",
+    "type": "object",
+    "properties": {
+      "battery-&-charging": {
+        "type": "string",
+        "fieldKey": "battery-&-charging",
+        "fieldlabel": "Battery & Charging",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "bluetooth": {
+        "type": "string",
+        "fieldKey": "bluetooth",
+        "fieldlabel": "Bluetooth",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "codecs-support": {
+        "type": "string",
+        "fieldKey": "codecs-support",
+        "fieldlabel": "Codecs Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "cord-length": {
+        "type": "string",
+        "fieldKey": "cord-length",
+        "fieldlabel": "Cord Length",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "driver-unit": {
+        "type": "string",
+        "fieldKey": "driver-unit",
+        "fieldlabel": "Driver Unit",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "frequency-response": {
+        "type": "string",
+        "fieldKey": "frequency-response",
+        "fieldlabel": "Frequency Response",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "impedance": {
+        "type": "string",
+        "fieldKey": "impedance",
+        "fieldlabel": "Impedance",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "input-plug": {
+        "type": "string",
+        "fieldKey": "input-plug",
+        "fieldlabel": "Input Plug",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "interface-&-controls": {
+        "type": "string",
+        "fieldKey": "interface-&-controls",
+        "fieldlabel": "Interface & Controls",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "microphone": {
+        "type": "string",
+        "fieldKey": "microphone",
+        "fieldlabel": "Microphone",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "playback-time": {
+        "type": "string",
+        "fieldKey": "playback-time",
+        "fieldlabel": "Playback time",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "sensitivity-(1khz)": {
+        "type": "string",
+        "fieldKey": "sensitivity-(1khz)",
+        "fieldlabel": "Sensitivity (1kHz)",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "type": {
+        "type": "string",
+        "fieldKey": "type",
+        "fieldlabel": "Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "voice-assistant-support": {
+        "type": "string",
+        "fieldKey": "voice-assistant-support",
+        "fieldlabel": "Voice Assistant Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "weather-resistance": {
+        "type": "string",
+        "fieldKey": "weather-resistance",
+        "fieldlabel": "Weather Resistance",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "headphones"
+      }
+    },
+    "required": [
+      "battery-&-charging",
+      "bluetooth",
+      "codecs-support",
+      "cord-length",
+      "dimensions",
+      "driver-unit",
+      "frequency-response",
+      "impedance",
+      "input-plug",
+      "interface-&-controls",
+      "microphone",
+      "other-features",
+      "playback-time",
+      "sensitivity-(1khz)",
+      "type",
+      "voice-assistant-support",
+      "weather-resistance",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}

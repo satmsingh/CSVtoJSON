@@ -1,0 +1,96 @@
+{
+  "formSchema": {
+    "title": "Optical Drives",
+    "type": "object",
+    "properties": {
+      "access-time:": {
+        "type": "string",
+        "fieldKey": "access-time:",
+        "fieldlabel": "Access Time:",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "buffer-size": {
+        "type": "string",
+        "fieldKey": "buffer-size",
+        "fieldlabel": "Buffer Size",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "interface": {
+        "type": "string",
+        "fieldKey": "interface",
+        "fieldlabel": "Interface",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "read-speed": {
+        "type": "string",
+        "fieldKey": "read-speed",
+        "fieldlabel": "Read Speed",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "supported-disc-formats": {
+        "type": "string",
+        "fieldKey": "supported-disc-formats",
+        "fieldlabel": "Supported Disc Formats",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "write-speed": {
+        "type": "string",
+        "fieldKey": "write-speed",
+        "fieldlabel": "Write Speed",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      },
+      "writing-mode": {
+        "type": "string",
+        "fieldKey": "writing-mode",
+        "fieldlabel": "Writing Mode",
+        "specificationType": "specifications",
+        "categoryUniqueName": "optical-drives"
+      }
+    },
+    "required": [
+      "access-time:",
+      "buffer-size",
+      "dimensions",
+      "interface",
+      "read-speed",
+      "supported-disc-formats",
+      "weight",
+      "write-speed",
+      "writing-mode"
+    ]
+  },
+  "uiSchema": {
+    "supported-disc-formats": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    },
+    "writing-mode": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "formSchema": {
+    "title": "NAS",
+    "type": "object",
+    "properties": {
+      "array-configuration": {
+        "type": "string",
+        "fieldKey": "array-configuration",
+        "fieldlabel": "Array Configuration",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "array-features": {
+        "type": "string",
+        "fieldKey": "array-features",
+        "fieldlabel": "Array Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "authentication": {
+        "type": "string",
+        "fieldKey": "authentication",
+        "fieldlabel": "Authentication",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "backup": {
+        "type": "string",
+        "fieldKey": "backup",
+        "fieldlabel": "Backup",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "dimension": {
+        "type": "string",
+        "fieldKey": "dimension",
+        "fieldlabel": "Dimension",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "disk-management": {
+        "type": "string",
+        "fieldKey": "disk-management",
+        "fieldlabel": "Disk Management",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "folder-management": {
+        "type": "string",
+        "fieldKey": "folder-management",
+        "fieldlabel": "Folder Management",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "hard-disk-drive-support": {
+        "type": "string",
+        "fieldKey": "hard-disk-drive-support",
+        "fieldlabel": "Hard Disk Drive Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "i/o-interface": {
+        "type": "string",
+        "fieldKey": "i/o-interface",
+        "fieldlabel": "I/O Interface",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "media-streaming-support": {
+        "type": "string",
+        "fieldKey": "media-streaming-support",
+        "fieldlabel": "Media Streaming Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "memory": {
+        "type": "string",
+        "fieldKey": "memory",
+        "fieldlabel": "Memory",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "network-client-support": {
+        "type": "string",
+        "fieldKey": "network-client-support",
+        "fieldlabel": "Network Client Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "network-file-services": {
+        "type": "string",
+        "fieldKey": "network-file-services",
+        "fieldlabel": "Network File Services",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "network-security": {
+        "type": "string",
+        "fieldKey": "network-security",
+        "fieldlabel": "Network Security",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "network-streaming-services": {
+        "type": "string",
+        "fieldKey": "network-streaming-services",
+        "fieldlabel": "Network Streaming Services",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "processor": {
+        "type": "string",
+        "fieldKey": "processor",
+        "fieldlabel": "Processor",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      },
+      "supported-usb-devices": {
+        "type": "string",
+        "fieldKey": "supported-usb-devices",
+        "fieldlabel": "Supported USB Devices",
+        "specificationType": "specifications",
+        "categoryUniqueName": "nas"
+      }
+    },
+    "required": [
+      "array-configuration",
+      "array-features",
+      "authentication",
+      "backup",
+      "dimension",
+      "disk-management",
+      "folder-management",
+      "hard-disk-drive-support",
+      "i/o-interface",
+      "media-streaming-support",
+      "memory",
+      "network-client-support",
+      "network-file-services",
+      "network-security",
+      "network-streaming-services",
+      "processor",
+      "supported-usb-devices"
+    ]
+  },
+  "uiSchema": {
+    "backup": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      }
+    },
+    "disk-management": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    },
+    "folder-management": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    },
+    "network-client-support": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    },
+    "supported-usb-devices": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      }
+    }
+  }
+}

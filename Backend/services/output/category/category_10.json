@@ -1,0 +1,35 @@
+{
+  "formSchema": {
+    "title": "Games & Gear",
+    "type": "object",
+    "properties": {
+      "features": {
+        "type": "string",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "games-&-gear"
+      },
+      "operating-system-support": {
+        "type": "string",
+        "fieldKey": "operating-system-support",
+        "fieldlabel": "Operating System Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "games-&-gear"
+      },
+      "system-requirements": {
+        "type": "string",
+        "fieldKey": "system-requirements",
+        "fieldlabel": "System Requirements",
+        "specificationType": "specifications",
+        "categoryUniqueName": "games-&-gear"
+      }
+    },
+    "required": [
+      "features",
+      "operating-system-support",
+      "system-requirements"
+    ]
+  },
+  "uiSchema": {}
+}

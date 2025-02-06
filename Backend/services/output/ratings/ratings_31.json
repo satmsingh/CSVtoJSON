@@ -1,6 +1,6 @@
 {
   "formSchema": {
-    "title": "Unknown Product 3",
+    "title": "Smart Living",
     "type": "object",
     "properties": {
       "design": {
@@ -8,7 +8,7 @@
         "fieldKey": "design",
         "fieldlabel": "Design",
         "specificationType": "ratings",
-        "categoryUniqueName": "blu-ray-players",
+        "categoryUniqueName": "smart-living",
         "enum": [
           0,
           1,
@@ -37,7 +37,7 @@
         "fieldKey": "features",
         "fieldlabel": "Features",
         "specificationType": "ratings",
-        "categoryUniqueName": "blu-ray-players",
+        "categoryUniqueName": "smart-living",
         "enum": [
           0,
           1,
@@ -66,7 +66,7 @@
         "fieldKey": "performance",
         "fieldlabel": "Performance",
         "specificationType": "ratings",
-        "categoryUniqueName": "blu-ray-players",
+        "categoryUniqueName": "smart-living",
         "enum": [
           0,
           1,
@@ -95,7 +95,7 @@
         "fieldKey": "value",
         "fieldlabel": "Value",
         "specificationType": "ratings",
-        "categoryUniqueName": "blu-ray-players",
+        "categoryUniqueName": "smart-living",
         "enum": [
           0,
           1,

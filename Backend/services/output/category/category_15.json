@@ -1,0 +1,107 @@
+{
+  "formSchema": {
+    "title": "Input Devices",
+    "type": "object",
+    "properties": {
+      "buttons": {
+        "type": "string",
+        "fieldKey": "buttons",
+        "fieldlabel": "Buttons",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "interface": {
+        "type": "string",
+        "fieldKey": "interface",
+        "fieldlabel": "Interface",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "keyboard-type": {
+        "type": "string",
+        "fieldKey": "keyboard-type",
+        "fieldlabel": "Keyboard Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "mouse-type": {
+        "type": "string",
+        "fieldKey": "mouse-type",
+        "fieldlabel": "Mouse Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "operating-system-compatibility": {
+        "type": "string",
+        "fieldKey": "operating-system-compatibility",
+        "fieldlabel": "Operating System Compatibility",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "power-requirements": {
+        "type": "string",
+        "fieldKey": "power-requirements",
+        "fieldlabel": "Power Requirements",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "resolution": {
+        "type": "string",
+        "fieldKey": "resolution",
+        "fieldlabel": "Resolution",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "tracking-engine": {
+        "type": "string",
+        "fieldKey": "tracking-engine",
+        "fieldlabel": "Tracking Engine",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      },
+      "wireless-technology": {
+        "type": "string",
+        "fieldKey": "wireless-technology",
+        "fieldlabel": "Wireless Technology",
+        "specificationType": "specifications",
+        "categoryUniqueName": "input-devices"
+      }
+    },
+    "required": [
+      "buttons",
+      "dimensions",
+      "interface",
+      "keyboard-type",
+      "mouse-type",
+      "operating-system-compatibility",
+      "other-features",
+      "power-requirements",
+      "resolution",
+      "tracking-engine",
+      "weight",
+      "wireless-technology"
+    ]
+  },
+  "uiSchema": {}
+}

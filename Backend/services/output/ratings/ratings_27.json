@@ -1,6 +1,6 @@
 {
   "formSchema": {
-    "title": "Unknown Product 9",
+    "title": "Photography",
     "type": "object",
     "properties": {
       "design": {
@@ -8,7 +8,7 @@
         "fieldKey": "design",
         "fieldlabel": "Design",
         "specificationType": "ratings",
-        "categoryUniqueName": "external-storage",
+        "categoryUniqueName": "photography",
         "enum": [
           0,
           1,
@@ -37,7 +37,7 @@
         "fieldKey": "features",
         "fieldlabel": "Features",
         "specificationType": "ratings",
-        "categoryUniqueName": "external-storage",
+        "categoryUniqueName": "photography",
         "enum": [
           0,
           1,
@@ -66,7 +66,36 @@
         "fieldKey": "performance",
         "fieldlabel": "Performance",
         "specificationType": "ratings",
-        "categoryUniqueName": "external-storage",
+        "categoryUniqueName": "photography",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "user-friendliness": {
+        "type": "number",
+        "fieldKey": "user-friendliness",
+        "fieldlabel": "User-Friendliness",
+        "specificationType": "ratings",
+        "categoryUniqueName": "photography",
         "enum": [
           0,
           1,
@@ -95,7 +124,7 @@
         "fieldKey": "value",
         "fieldlabel": "Value",
         "specificationType": "ratings",
-        "categoryUniqueName": "external-storage",
+        "categoryUniqueName": "photography",
         "enum": [
           0,
           1,
@@ -124,6 +153,7 @@
       "design",
       "features",
       "performance",
+      "user-friendliness",
       "value"
     ]
   },
@@ -135,6 +165,9 @@
       "ui:widget": "select"
     },
     "performance": {
+      "ui:widget": "select"
+    },
+    "user-friendliness": {
       "ui:widget": "select"
     },
     "value": {

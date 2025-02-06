@@ -1,0 +1,67 @@
+{
+  "formSchema": {
+    "title": "Speakers",
+    "type": "object",
+    "properties": {
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      },
+      "frequency-response": {
+        "type": "string",
+        "fieldKey": "frequency-response",
+        "fieldlabel": "Frequency Response",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      },
+      "inputs-/-outputs": {
+        "type": "string",
+        "fieldKey": "inputs-/-outputs",
+        "fieldlabel": "Inputs / Outputs",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      },
+      "power-output": {
+        "type": "string",
+        "fieldKey": "power-output",
+        "fieldlabel": "Power Output",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      },
+      "satellites-(per-speaker)": {
+        "type": "string",
+        "fieldKey": "satellites-(per-speaker)",
+        "fieldlabel": "Satellites (per speaker)",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      },
+      "subwoofer-driver": {
+        "type": "string",
+        "fieldKey": "subwoofer-driver",
+        "fieldlabel": "Subwoofer Driver",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      },
+      "surround-sound-capability": {
+        "type": "string",
+        "fieldKey": "surround-sound-capability",
+        "fieldlabel": "Surround Sound Capability",
+        "specificationType": "specifications",
+        "categoryUniqueName": "speakers"
+      }
+    },
+    "required": [
+      "dimensions",
+      "frequency-response",
+      "inputs-/-outputs",
+      "power-output",
+      "satellites-(per-speaker)",
+      "subwoofer-driver",
+      "surround-sound-capability"
+    ]
+  },
+  "uiSchema": {}
+}

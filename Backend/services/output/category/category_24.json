@@ -1,0 +1,115 @@
+{
+  "formSchema": {
+    "title": "Notebooks",
+    "type": "object",
+    "properties": {
+      "audio": {
+        "type": "string",
+        "fieldKey": "audio",
+        "fieldlabel": "Audio",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "battery-type": {
+        "type": "string",
+        "fieldKey": "battery-type",
+        "fieldlabel": "Battery Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "connectivity": {
+        "type": "string",
+        "fieldKey": "connectivity",
+        "fieldlabel": "Connectivity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "i/o-ports": {
+        "type": "string",
+        "fieldKey": "i/o-ports",
+        "fieldlabel": "I/O Ports",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "miscellaneous": {
+        "type": "string",
+        "fieldKey": "miscellaneous",
+        "fieldlabel": "Miscellaneous",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "operating-system": {
+        "type": "string",
+        "fieldKey": "operating-system",
+        "fieldlabel": "Operating System",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "optical-drive": {
+        "type": "string",
+        "fieldKey": "optical-drive",
+        "fieldlabel": "Optical Drive",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "processor-and-chipset": {
+        "type": "string",
+        "fieldKey": "processor-and-chipset",
+        "fieldlabel": "Processor and Chipset",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "storage": {
+        "type": "string",
+        "fieldKey": "storage",
+        "fieldlabel": "Storage",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "system-memory": {
+        "type": "string",
+        "fieldKey": "system-memory",
+        "fieldlabel": "System Memory",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "video-&-display": {
+        "type": "string",
+        "fieldKey": "video-&-display",
+        "fieldlabel": "Video & Display",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "notebooks"
+      }
+    },
+    "required": [
+      "audio",
+      "battery-type",
+      "connectivity",
+      "dimensions",
+      "i/o-ports",
+      "miscellaneous",
+      "operating-system",
+      "optical-drive",
+      "processor-and-chipset",
+      "storage",
+      "system-memory",
+      "video-&-display",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}

@@ -1,0 +1,131 @@
+{
+  "formSchema": {
+    "title": "Power Supply Units",
+    "type": "object",
+    "properties": {
+      "certifications": {
+        "type": "string",
+        "fieldKey": "certifications",
+        "fieldlabel": "Certifications",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "connectors": {
+        "type": "string",
+        "fieldKey": "connectors",
+        "fieldlabel": "Connectors",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "cooling-fan": {
+        "type": "string",
+        "fieldKey": "cooling-fan",
+        "fieldlabel": "Cooling Fan",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "efficiency": {
+        "type": "string",
+        "fieldKey": "efficiency",
+        "fieldlabel": "Efficiency",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "input-current": {
+        "type": "string",
+        "fieldKey": "input-current",
+        "fieldlabel": "Input Current",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "input-frequency-range": {
+        "type": "string",
+        "fieldKey": "input-frequency-range",
+        "fieldlabel": "Input Frequency Range",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "input-voltage": {
+        "type": "string",
+        "fieldKey": "input-voltage",
+        "fieldlabel": "Input Voltage",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "max-output-capacity": {
+        "type": "string",
+        "fieldKey": "max-output-capacity",
+        "fieldlabel": "Max Output Capacity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "mtbf": {
+        "type": "string",
+        "fieldKey": "mtbf",
+        "fieldlabel": "MTBF",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "other-features": {
+        "type": "string",
+        "fieldKey": "other-features",
+        "fieldlabel": "Other Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "output-capacity": {
+        "type": "string",
+        "fieldKey": "output-capacity",
+        "fieldlabel": "Output Capacity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "power-factor-correction-(pfc)": {
+        "type": "string",
+        "fieldKey": "power-factor-correction-(pfc)",
+        "fieldlabel": "Power Factor Correction (PFC)",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "protection": {
+        "type": "string",
+        "fieldKey": "protection",
+        "fieldlabel": "Protection",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      },
+      "psu-type": {
+        "type": "string",
+        "fieldKey": "psu-type",
+        "fieldlabel": "PSU Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "power-supply-units"
+      }
+    },
+    "required": [
+      "certifications",
+      "connectors",
+      "cooling-fan",
+      "dimensions",
+      "efficiency",
+      "input-current",
+      "input-frequency-range",
+      "input-voltage",
+      "max-output-capacity",
+      "mtbf",
+      "other-features",
+      "output-capacity",
+      "power-factor-correction-(pfc)",
+      "protection",
+      "psu-type"
+    ]
+  },
+  "uiSchema": {}
+}

@@ -1,0 +1,9 @@
+{
+  "formSchema": {
+    "title": "Power Supply Units",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "uiSchema": {}
+}

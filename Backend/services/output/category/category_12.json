@@ -1,0 +1,123 @@
+{
+  "formSchema": {
+    "title": "Hard Disk Drives",
+    "type": "object",
+    "properties": {
+      "average-latency": {
+        "type": "string",
+        "fieldKey": "average-latency",
+        "fieldlabel": "Average Latency",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "average-read-seek": {
+        "type": "string",
+        "fieldKey": "average-read-seek",
+        "fieldlabel": "Average Read Seek",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "average-seek": {
+        "type": "string",
+        "fieldKey": "average-seek",
+        "fieldlabel": "Average Seek",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "buffer": {
+        "type": "string",
+        "fieldKey": "buffer",
+        "fieldlabel": "Buffer",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "capacity": {
+        "type": "string",
+        "fieldKey": "capacity",
+        "fieldlabel": "Capacity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "interface-&-data-transfer-rate": {
+        "type": "string",
+        "fieldKey": "interface-&-data-transfer-rate",
+        "fieldlabel": "Interface & Data Transfer Rate",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "model-no.": {
+        "type": "string",
+        "fieldKey": "model-no.",
+        "fieldlabel": "Model No.",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "number-of-heads": {
+        "type": "string",
+        "fieldKey": "number-of-heads",
+        "fieldlabel": "Number of Heads",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "number-of-platters": {
+        "type": "string",
+        "fieldKey": "number-of-platters",
+        "fieldlabel": "Number of Platters",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "power-requirements": {
+        "type": "string",
+        "fieldKey": "power-requirements",
+        "fieldlabel": "Power Requirements",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "rotational-speed": {
+        "type": "string",
+        "fieldKey": "rotational-speed",
+        "fieldlabel": "Rotational Speed",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "warranty": {
+        "type": "string",
+        "fieldKey": "warranty",
+        "fieldlabel": "Warranty",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "hard-disk-drives"
+      }
+    },
+    "required": [
+      "average-latency",
+      "average-read-seek",
+      "average-seek",
+      "buffer",
+      "capacity",
+      "dimensions",
+      "interface-&-data-transfer-rate",
+      "model-no.",
+      "number-of-heads",
+      "number-of-platters",
+      "power-requirements",
+      "rotational-speed",
+      "warranty",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}

@@ -1,0 +1,131 @@
+{
+  "formSchema": {
+    "title": "Televisions",
+    "type": "object",
+    "properties": {
+      "audio-features": {
+        "type": "string",
+        "fieldKey": "audio-features",
+        "fieldlabel": "Audio Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "back-panel-connectors": {
+        "type": "string",
+        "fieldKey": "back-panel-connectors",
+        "fieldlabel": "Back Panel Connectors",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "display-area": {
+        "type": "string",
+        "fieldKey": "display-area",
+        "fieldlabel": "Display Area",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "dynamic-contrast-ratio": {
+        "type": "string",
+        "fieldKey": "dynamic-contrast-ratio",
+        "fieldlabel": "Dynamic Contrast Ratio",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "front/side-connectors": {
+        "type": "string",
+        "fieldKey": "front/side-connectors",
+        "fieldlabel": "Front/Side Connectors",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "model": {
+        "type": "string",
+        "fieldKey": "model",
+        "fieldlabel": "Model",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "native-resolution": {
+        "type": "string",
+        "fieldKey": "native-resolution",
+        "fieldlabel": "Native Resolution",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "panel-type": {
+        "type": "string",
+        "fieldKey": "panel-type",
+        "fieldlabel": "Panel Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "power": {
+        "type": "string",
+        "fieldKey": "power",
+        "fieldlabel": "Power",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "screen-aspect-ratio": {
+        "type": "string",
+        "fieldKey": "screen-aspect-ratio",
+        "fieldlabel": "Screen Aspect Ratio",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "speakers": {
+        "type": "string",
+        "fieldKey": "speakers",
+        "fieldlabel": "Speakers",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "tuner-type": {
+        "type": "string",
+        "fieldKey": "tuner-type",
+        "fieldlabel": "Tuner Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "tv-features": {
+        "type": "string",
+        "fieldKey": "tv-features",
+        "fieldlabel": "TV Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "televisions"
+      }
+    },
+    "required": [
+      "audio-features",
+      "back-panel-connectors",
+      "dimensions",
+      "display-area",
+      "dynamic-contrast-ratio",
+      "front/side-connectors",
+      "model",
+      "native-resolution",
+      "panel-type",
+      "power",
+      "screen-aspect-ratio",
+      "speakers",
+      "tuner-type",
+      "tv-features",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}

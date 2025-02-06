@@ -21,10 +21,10 @@ const ratingEnum = [0, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.
 function parseUISpecs(uiSpecs) {
     if (!uiSpecs) return {};
     const specs = {};
-    uiSpecs.split('\n').forEach(spec => {
-        const [field, value] = spec.split('=').map(s => s.trim());
+    uiSpecs.split("\n").forEach((spec) => {
+        const [field, value] = spec.split("=").map((s) => s.trim());
         if (field && value) {
-            specs[field.toLowerCase().replace(/\s+/g, '-')] = value;
+            specs[field.toLowerCase().replace(/\s+/g, "-")] = value;
         }
     });
     return specs;
@@ -34,10 +34,10 @@ function parseUISpecs(uiSpecs) {
 function parseValueSpecs(valueSpecs) {
     if (!valueSpecs) return {};
     const specs = {};
-    valueSpecs.split('\n').forEach(spec => {
-        const [field, value] = spec.split('=').map(s => s.trim());
+    valueSpecs.split("\n").forEach((spec) => {
+        const [field, value] = spec.split("=").map((s) => s.trim());
         if (field && value) {
-            specs[field.toLowerCase().replace(/\s+/g, '-')] = value;
+            specs[field.toLowerCase().replace(/\s+/g, "-")] = value;
         }
     });
     return specs;
@@ -45,7 +45,7 @@ function parseValueSpecs(valueSpecs) {
 
 // Format category unique name
 function formatCategoryUniqueName(category) {
-    return category.toLowerCase().replace(/\s+/g, '-');
+    return category.toLowerCase().replace(/\s+/g, "-");
 }
 
 // Process Excel file and generate JSON
@@ -69,7 +69,7 @@ async function processExcel(filePath) {
 
         const uiSpecs = parseUISpecs(row["Specs UI"]);
         const valueSpecs = parseValueSpecs(row["Specs values"]);
-        
+
         if (specsFields.length === 0 && ratingsFields.length === 0) {
             console.warn(`Skipping row ${index + 1} due to missing Specs and Ratings fields.`);
             return;
@@ -79,7 +79,7 @@ async function processExcel(filePath) {
 
         let specsSchema = {
             formSchema: {
-                title: productCategory,
+                title: productCategory, // ✅ Title is now set to Product Category
                 type: "object",
                 properties: {},
                 required: []
@@ -89,7 +89,7 @@ async function processExcel(filePath) {
 
         let productSchema = {
             formSchema: {
-                title: productName,
+                title: productCategory, // ✅ Fixed Title to match Product Category
                 type: "object",
                 properties: {},
                 required: []
@@ -99,7 +99,7 @@ async function processExcel(filePath) {
 
         // Process Spec fields
         specsFields.forEach((field) => {
-            const fieldName = field.toLowerCase().replace(/\s+/g, '-');
+            const fieldName = field.toLowerCase().replace(/\s+/g, "-");
             const baseProperties = {
                 type: "string",
                 fieldKey: fieldName,
@@ -108,7 +108,7 @@ async function processExcel(filePath) {
                 categoryUniqueName: categoryUniqueName
             };
 
-            if (valueSpecs[fieldName] && valueSpecs[fieldName].toLowerCase() === 'yes/no selection') {
+            if (valueSpecs[fieldName] && valueSpecs[fieldName].toLowerCase() === "yes/no selection") {
                 specsSchema.formSchema.properties[fieldName] = {
                     ...baseProperties,
                     enum: ["Yes", "No"],
@@ -123,7 +123,7 @@ async function processExcel(filePath) {
                         ]
                     }
                 };
-            } else if (uiSpecs[fieldName] && uiSpecs[fieldName].toLowerCase().includes('rows')) {
+            } else if (uiSpecs[fieldName] && uiSpecs[fieldName].toLowerCase().includes("rows")) {
                 specsSchema.formSchema.properties[fieldName] = baseProperties;
                 specsSchema.uiSchema[fieldName] = {
                     "ui:widget": "textarea",
@@ -140,7 +140,7 @@ async function processExcel(filePath) {
 
         // Process Ratings fields
         ratingsFields.forEach((field) => {
-            const fieldName = field.toLowerCase().replace(/\s+/g, '-');
+            const fieldName = field.toLowerCase().replace(/\s+/g, "-");
             productSchema.formSchema.properties[fieldName] = {
                 type: "number",
                 fieldKey: fieldName,
@@ -154,19 +154,34 @@ async function processExcel(filePath) {
         });
 
         const categoryFilePath = path.join(categoryDir, `category_${index + 1}.json`);
-        const productFilePath = path.join(ratingsDir, `product_${index + 1}.json`);
+        const productFilePath = path.join(ratingsDir, `ratings_${index + 1}.json`);
 
-        console.log("Writing category JSON to:", categoryFilePath);
-        console.log("Writing product JSON to:", productFilePath);
-
-        try {
-            fs.writeFileSync(categoryFilePath, JSON.stringify(specsSchema, null, 2));
-            fs.writeFileSync(productFilePath, JSON.stringify(productSchema, null, 2));
-            console.log(` Row ${index + 1}: JSON files generated successfully.`);
-            outputFiles.push({ categoryFilePath, productFilePath });
-        } catch (error) {
-            console.error(` Error writing JSON for row ${index + 1}:`, error);
+        // Check if files already exist before writing
+        if (fs.existsSync(categoryFilePath)) {
+            console.log(`Skipping category file: ${categoryFilePath} (already exists)`);
+        } else {
+            console.log("Writing category JSON to:", categoryFilePath);
+            try {
+                fs.writeFileSync(categoryFilePath, JSON.stringify(specsSchema, null, 2));
+                console.log(`Row ${index + 1}: Category JSON generated successfully.`);
+            } catch (error) {
+                console.error(`Error writing category JSON for row ${index + 1}:`, error);
+            }
         }
+
+        if (fs.existsSync(productFilePath)) {
+            console.log(`Skipping product file: ${productFilePath} (already exists)`);
+        } else {
+            console.log("Writing product JSON to:", productFilePath);
+            try {
+                fs.writeFileSync(productFilePath, JSON.stringify(productSchema, null, 2));
+                console.log(`Row ${index + 1}: Product JSON generated successfully.`);
+            } catch (error) {
+                console.error(`Error writing product JSON for row ${index + 1}:`, error);
+            }
+        }
+
+        outputFiles.push({ categoryFilePath, productFilePath });
     });
 
     return outputFiles;

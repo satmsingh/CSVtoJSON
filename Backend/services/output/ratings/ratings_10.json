@@ -1,0 +1,309 @@
+{
+  "formSchema": {
+    "title": "Games & Gear",
+    "type": "object",
+    "properties": {
+      "addictiveness": {
+        "type": "number",
+        "fieldKey": "addictiveness",
+        "fieldlabel": "Addictiveness",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "design": {
+        "type": "number",
+        "fieldKey": "design",
+        "fieldlabel": "Design",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "features": {
+        "type": "number",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "graphics": {
+        "type": "number",
+        "fieldKey": "graphics",
+        "fieldlabel": "Graphics",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "performance": {
+        "type": "number",
+        "fieldKey": "performance",
+        "fieldlabel": "Performance",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "playability": {
+        "type": "number",
+        "fieldKey": "playability",
+        "fieldlabel": "Playability",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "sound": {
+        "type": "number",
+        "fieldKey": "sound",
+        "fieldlabel": "Sound",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "user-friendliness": {
+        "type": "number",
+        "fieldKey": "user-friendliness",
+        "fieldlabel": "User-Friendliness",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "value": {
+        "type": "number",
+        "fieldKey": "value",
+        "fieldlabel": "Value",
+        "specificationType": "ratings",
+        "categoryUniqueName": "games-&-gear",
+        "enum": [
+          0,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      }
+    },
+    "required": [
+      "addictiveness",
+      "design",
+      "features",
+      "graphics",
+      "performance",
+      "playability",
+      "sound",
+      "user-friendliness",
+      "value"
+    ]
+  },
+  "uiSchema": {
+    "addictiveness": {
+      "ui:widget": "select"
+    },
+    "design": {
+      "ui:widget": "select"
+    },
+    "features": {
+      "ui:widget": "select"
+    },
+    "graphics": {
+      "ui:widget": "select"
+    },
+    "performance": {
+      "ui:widget": "select"
+    },
+    "playability": {
+      "ui:widget": "select"
+    },
+    "sound": {
+      "ui:widget": "select"
+    },
+    "user-friendliness": {
+      "ui:widget": "select"
+    },
+    "value": {
+      "ui:widget": "select"
+    }
+  }
+}

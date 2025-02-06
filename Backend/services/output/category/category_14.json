@@ -1,0 +1,123 @@
+{
+  "formSchema": {
+    "title": "Inkjet Printers",
+    "type": "object",
+    "properties": {
+      "auto-duplex-function?": {
+        "type": "string",
+        "fieldKey": "auto-duplex-function?",
+        "fieldlabel": "Auto Duplex Function?",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "flatbed-printing": {
+        "type": "string",
+        "fieldKey": "flatbed-printing",
+        "fieldlabel": "Flatbed Printing",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "interface": {
+        "type": "string",
+        "fieldKey": "interface",
+        "fieldlabel": "Interface",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "minimum-ink-droplet-size": {
+        "type": "string",
+        "fieldKey": "minimum-ink-droplet-size",
+        "fieldlabel": "Minimum Ink Droplet Size",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "number-of-inks": {
+        "type": "string",
+        "fieldKey": "number-of-inks",
+        "fieldlabel": "Number of Inks",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "os-support": {
+        "type": "string",
+        "fieldKey": "os-support",
+        "fieldlabel": "OS Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "paper-capacity": {
+        "type": "string",
+        "fieldKey": "paper-capacity",
+        "fieldlabel": "Paper Capacity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "paper-sizes": {
+        "type": "string",
+        "fieldKey": "paper-sizes",
+        "fieldlabel": "Paper Sizes",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "print-speed": {
+        "type": "string",
+        "fieldKey": "print-speed",
+        "fieldlabel": "Print Speed",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "print-technology": {
+        "type": "string",
+        "fieldKey": "print-technology",
+        "fieldlabel": "Print Technology",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "printable-width": {
+        "type": "string",
+        "fieldKey": "printable-width",
+        "fieldlabel": "Printable Width",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "resolution": {
+        "type": "string",
+        "fieldKey": "resolution",
+        "fieldlabel": "Resolution",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "inkjet-printers"
+      }
+    },
+    "required": [
+      "auto-duplex-function?",
+      "dimensions",
+      "flatbed-printing",
+      "interface",
+      "minimum-ink-droplet-size",
+      "number-of-inks",
+      "os-support",
+      "paper-capacity",
+      "paper-sizes",
+      "print-speed",
+      "print-technology",
+      "printable-width",
+      "resolution",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}

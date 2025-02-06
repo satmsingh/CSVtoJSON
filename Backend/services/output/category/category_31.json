@@ -1,0 +1,83 @@
+{
+  "formSchema": {
+    "title": "Smart Living",
+    "type": "object",
+    "properties": {
+      "battery-&-charging": {
+        "type": "string",
+        "fieldKey": "battery-&-charging",
+        "fieldlabel": "Battery & Charging",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "features": {
+        "type": "string",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "interface-&-controls": {
+        "type": "string",
+        "fieldKey": "interface-&-controls",
+        "fieldlabel": "Interface & Controls",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "ports": {
+        "type": "string",
+        "fieldKey": "ports",
+        "fieldlabel": "Ports",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "smart-home-support": {
+        "type": "string",
+        "fieldKey": "smart-home-support",
+        "fieldlabel": "Smart Home Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "voice-assistant-support": {
+        "type": "string",
+        "fieldKey": "voice-assistant-support",
+        "fieldlabel": "Voice Assistant Support",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      },
+      "wireless-connectivity": {
+        "type": "string",
+        "fieldKey": "wireless-connectivity",
+        "fieldlabel": "Wireless Connectivity",
+        "specificationType": "specifications",
+        "categoryUniqueName": "smart-living"
+      }
+    },
+    "required": [
+      "battery-&-charging",
+      "dimensions",
+      "features",
+      "interface-&-controls",
+      "ports",
+      "smart-home-support",
+      "voice-assistant-support",
+      "weight",
+      "wireless-connectivity"
+    ]
+  },
+  "uiSchema": {}
+}

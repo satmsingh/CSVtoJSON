@@ -1,0 +1,147 @@
+{
+  "formSchema": {
+    "title": "Monitors",
+    "type": "object",
+    "properties": {
+      "brightness": {
+        "type": "string",
+        "fieldKey": "brightness",
+        "fieldlabel": "Brightness",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "contrast-ratio": {
+        "type": "string",
+        "fieldKey": "contrast-ratio",
+        "fieldlabel": "Contrast Ratio",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "dimensions": {
+        "type": "string",
+        "fieldKey": "dimensions",
+        "fieldlabel": "Dimensions",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "display-type": {
+        "type": "string",
+        "fieldKey": "display-type",
+        "fieldlabel": "Display Type",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "display-area": {
+        "type": "string",
+        "fieldKey": "display-area",
+        "fieldlabel": "Display Area",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "horizontal-scanning-frequency": {
+        "type": "string",
+        "fieldKey": "horizontal-scanning-frequency",
+        "fieldlabel": "Horizontal Scanning Frequency",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "inputs": {
+        "type": "string",
+        "fieldKey": "inputs",
+        "fieldlabel": "Inputs",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "model": {
+        "type": "string",
+        "fieldKey": "model",
+        "fieldlabel": "Model",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "native-resolution": {
+        "type": "string",
+        "fieldKey": "native-resolution",
+        "fieldlabel": "Native Resolution",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "power": {
+        "type": "string",
+        "fieldKey": "power",
+        "fieldlabel": "Power",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "response-time": {
+        "type": "string",
+        "fieldKey": "response-time",
+        "fieldlabel": "Response Time",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "special-features": {
+        "type": "string",
+        "fieldKey": "special-features",
+        "fieldlabel": "Special Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "swivel": {
+        "type": "string",
+        "fieldKey": "swivel",
+        "fieldlabel": "Swivel",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "tilt": {
+        "type": "string",
+        "fieldKey": "tilt",
+        "fieldlabel": "Tilt",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "vertical-scanning-frequency": {
+        "type": "string",
+        "fieldKey": "vertical-scanning-frequency",
+        "fieldlabel": "Vertical Scanning Frequency",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "viewing-angle": {
+        "type": "string",
+        "fieldKey": "viewing-angle",
+        "fieldlabel": "Viewing Angle",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      },
+      "weight": {
+        "type": "string",
+        "fieldKey": "weight",
+        "fieldlabel": "Weight",
+        "specificationType": "specifications",
+        "categoryUniqueName": "monitors"
+      }
+    },
+    "required": [
+      "brightness",
+      "contrast-ratio",
+      "dimensions",
+      "display-type",
+      "display-area",
+      "horizontal-scanning-frequency",
+      "inputs",
+      "model",
+      "native-resolution",
+      "power",
+      "response-time",
+      "special-features",
+      "swivel",
+      "tilt",
+      "vertical-scanning-frequency",
+      "viewing-angle",
+      "weight"
+    ]
+  },
+  "uiSchema": {}
+}

@@ -1,0 +1,19 @@
+{
+  "formSchema": {
+    "title": "Others",
+    "type": "object",
+    "properties": {
+      "features": {
+        "type": "string",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
+        "specificationType": "specifications",
+        "categoryUniqueName": "others"
+      }
+    },
+    "required": [
+      "features"
+    ]
+  },
+  "uiSchema": {}
+}

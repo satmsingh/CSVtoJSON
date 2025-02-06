@@ -1,14 +1,14 @@
 {
   "formSchema": {
-    "title": "Unknown Product 5",
+    "title": "Graphics Cards",
     "type": "object",
     "properties": {
-      "aesthetics": {
+      "features": {
         "type": "number",
-        "fieldKey": "aesthetics",
-        "fieldlabel": "Aesthetics",
+        "fieldKey": "features",
+        "fieldlabel": "Features",
         "specificationType": "ratings",
-        "categoryUniqueName": "casings",
+        "categoryUniqueName": "graphics-cards",
         "enum": [
           0,
           1,
@@ -32,41 +32,12 @@
           10
         ]
       },
-      "functionality": {
+      "performance": {
         "type": "number",
-        "fieldKey": "functionality",
-        "fieldlabel": "Functionality",
+        "fieldKey": "performance",
+        "fieldlabel": "Performance",
         "specificationType": "ratings",
-        "categoryUniqueName": "casings",
-        "enum": [
-          0,
-          1,
-          1.5,
-          2,
-          2.5,
-          3,
-          3.5,
-          4,
-          4.5,
-          5,
-          5.5,
-          6,
-          6.5,
-          7,
-          7.5,
-          8,
-          8.5,
-          9,
-          9.5,
-          10
-        ]
-      },
-      "usability": {
-        "type": "number",
-        "fieldKey": "usability",
-        "fieldlabel": "Usability",
-        "specificationType": "ratings",
-        "categoryUniqueName": "casings",
+        "categoryUniqueName": "graphics-cards",
         "enum": [
           0,
           1,
@@ -95,7 +66,7 @@
         "fieldKey": "value",
         "fieldlabel": "Value",
         "specificationType": "ratings",
-        "categoryUniqueName": "casings",
+        "categoryUniqueName": "graphics-cards",
         "enum": [
           0,
           1,
@@ -121,20 +92,16 @@
       }
     },
     "required": [
-      "aesthetics",
-      "functionality",
-      "usability",
+      "features",
+      "performance",
       "value"
     ]
   },
   "uiSchema": {
-    "aesthetics": {
+    "features": {
       "ui:widget": "select"
     },
-    "functionality": {
-      "ui:widget": "select"
-    },
-    "usability": {
+    "performance": {
       "ui:widget": "select"
     },
     "value": {
