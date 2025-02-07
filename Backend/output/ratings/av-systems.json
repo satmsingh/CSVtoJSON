@@ -1,16 +1,14 @@
 {
   "formSchema": {
-    "title": "AV Systems",
+    "title": "Av Systems",
     "type": "object",
     "properties": {
       "design": {
         "type": "number",
-        "fieldKey": "design",
-        "fieldlabel": "Design",
-        "specificationType": "ratings",
-        "categoryUniqueName": "av-systems",
+        "title": "Design",
         "enum": [
           0,
+          0.5,
           1,
           1.5,
           2,
@@ -34,12 +32,10 @@
       },
       "features": {
         "type": "number",
-        "fieldKey": "features",
-        "fieldlabel": "Features",
-        "specificationType": "ratings",
-        "categoryUniqueName": "av-systems",
+        "title": "Features",
         "enum": [
           0,
+          0.5,
           1,
           1.5,
           2,
@@ -63,12 +59,10 @@
       },
       "performance": {
         "type": "number",
-        "fieldKey": "performance",
-        "fieldlabel": "Performance",
-        "specificationType": "ratings",
-        "categoryUniqueName": "av-systems",
+        "title": "Performance",
         "enum": [
           0,
+          0.5,
           1,
           1.5,
           2,
@@ -92,12 +86,10 @@
       },
       "value": {
         "type": "number",
-        "fieldKey": "value",
-        "fieldlabel": "Value",
-        "specificationType": "ratings",
-        "categoryUniqueName": "av-systems",
+        "title": "Value",
         "enum": [
           0,
+          0.5,
           1,
           1.5,
           2,

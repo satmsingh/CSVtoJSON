@@ -1,41 +1,44 @@
 const express = require("express");
 const multer = require("multer");
-const path = require("path");
-const fs = require("fs");
 const cors = require("cors");
-const { processExcel } = require("./services/fileService");
+const path = require("path");
+const { processExcelFile } = require("./services/fileService");
 
 const app = express();
 const port = 5000;
 
 app.use(cors());
+app.use(express.json());
 
-// Configure Multer for file uploads
-const upload = multer({ dest: "uploads/" });
+// Configure multer for file uploads
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        const uploadPath = path.join(__dirname, "uploads");
+        cb(null, uploadPath);
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+const upload = multer({ storage });
 
-// Ensure output directory exists
-const outputDir = path.join(__dirname, "output");
-if (!fs.existsSync(outputDir)) {
-    console.log("Creating output directory...");
-    fs.mkdirSync(outputDir, { recursive: true });
-}
-
-// File upload endpoint
+// Upload endpoint
 app.post("/upload", upload.single("file"), async (req, res) => {
     try {
-        console.log("File received:", req.file.originalname);
+        if (!req.file) {
+            return res.status(400).json({ error: "No file uploaded" });
+        }
 
-        // Process the uploaded Excel file
-        const outputFiles = await processExcel(req.file.path);
+        const filePath = req.file.path;
+        const jsonSchema = await processExcelFile(filePath);
 
-        res.json({ message: "JSON files generated successfully", files: outputFiles });
+        res.json(jsonSchema);
     } catch (error) {
         console.error("Error processing file:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
 });
 
-// Start the server
 app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });

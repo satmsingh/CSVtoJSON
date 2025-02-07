@@ -1,16 +1,14 @@
 {
   "formSchema": {
-    "title": "Solid State Drives",
+    "title": "Apps Software",
     "type": "object",
     "properties": {
       "features": {
         "type": "number",
-        "fieldKey": "features",
-        "fieldlabel": "Features",
-        "specificationType": "ratings",
-        "categoryUniqueName": "solid-state-drives",
+        "title": "Features",
         "enum": [
           0,
+          0.5,
           1,
           1.5,
           2,
@@ -34,12 +32,37 @@
       },
       "performance": {
         "type": "number",
-        "fieldKey": "performance",
-        "fieldlabel": "Performance",
-        "specificationType": "ratings",
-        "categoryUniqueName": "solid-state-drives",
+        "title": "Performance",
         "enum": [
           0,
+          0.5,
+          1,
+          1.5,
+          2,
+          2.5,
+          3,
+          3.5,
+          4,
+          4.5,
+          5,
+          5.5,
+          6,
+          6.5,
+          7,
+          7.5,
+          8,
+          8.5,
+          9,
+          9.5,
+          10
+        ]
+      },
+      "user-friendliness": {
+        "type": "number",
+        "title": "User Friendliness",
+        "enum": [
+          0,
+          0.5,
           1,
           1.5,
           2,
@@ -63,12 +86,10 @@
       },
       "value": {
         "type": "number",
-        "fieldKey": "value",
-        "fieldlabel": "Value",
-        "specificationType": "ratings",
-        "categoryUniqueName": "solid-state-drives",
+        "title": "Value",
         "enum": [
           0,
+          0.5,
           1,
           1.5,
           2,
@@ -94,6 +115,7 @@
     "required": [
       "features",
       "performance",
+      "user-friendliness",
       "value"
     ]
   },
@@ -102,6 +124,9 @@
       "ui:widget": "select"
     },
     "performance": {
+      "ui:widget": "select"
+    },
+    "user-friendliness": {
       "ui:widget": "select"
     },
     "value": {

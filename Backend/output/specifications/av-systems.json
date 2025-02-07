@@ -1,0 +1,96 @@
+{
+  "formSchema": {
+    "title": "Av Systems",
+    "type": "object",
+    "properties": {
+      "amplifier-type": {
+        "type": "string",
+        "title": "Amplifier Type"
+      },
+      "audio-format-support": {
+        "type": "string",
+        "title": "Audio Format Support"
+      },
+      "dimensions": {
+        "type": "string",
+        "title": "Dimensions"
+      },
+      "dock-system-&-compatibility": {
+        "type": "string",
+        "title": "Dock System & Compatibility"
+      },
+      "driver-unit": {
+        "type": "string",
+        "title": "Driver Unit"
+      },
+      "frequency-range": {
+        "type": "string",
+        "title": "Frequency Range"
+      },
+      "i/o-ports": {
+        "type": "string",
+        "title": "I/O Ports"
+      },
+      "model-/specs": {
+        "type": "string",
+        "title": "Model / Specs"
+      },
+      "other-features": {
+        "type": "string",
+        "title": "Other features",
+        "enum": [
+          "Yes",
+          "No"
+        ]
+      },
+      "power": {
+        "type": "string",
+        "title": "Power"
+      },
+      "power-output": {
+        "type": "string",
+        "title": "Power Output"
+      },
+      "remote-control": {
+        "type": "string",
+        "title": "Remote Control"
+      },
+      "video-format-support": {
+        "type": "string",
+        "title": "Video Format Support"
+      },
+      "weight": {
+        "type": "string",
+        "title": "Weight"
+      },
+      "wireless-connectivity": {
+        "type": "string",
+        "title": "Wireless Connectivity"
+      }
+    },
+    "required": []
+  },
+  "uiSchema": {
+    "audio-format-support": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 6
+      }
+    },
+    "model-/specs": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 5
+      }
+    },
+    "other-features": {
+      "ui:widget": "select"
+    },
+    "power": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 9
+      }
+    }
+  }
+}

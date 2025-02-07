@@ -1,0 +1,30 @@
+{
+  "formSchema": {
+    "title": "Apps Software",
+    "type": "object",
+    "properties": {
+      "feature": {
+        "type": "string",
+        "title": "Features"
+      },
+      "os-support": {
+        "type": "string",
+        "title": "Operating System Support"
+      },
+      "other-box-items": {
+        "type": "string",
+        "title": "Other Box Contents"
+      },
+      "software-support": {
+        "type": "string",
+        "title": "Software Support / Subscription"
+      },
+      "system-requirement": {
+        "type": "string",
+        "title": "System Requirements"
+      }
+    },
+    "required": []
+  },
+  "uiSchema": {}
+}

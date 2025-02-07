@@ -1,190 +1,149 @@
-const xlsx = require("xlsx");
 const fs = require("fs");
 const path = require("path");
+const xlsx = require("xlsx");
 
-const outputDir = path.join(__dirname, "output");
-const categoryDir = path.join(outputDir, "category");
-const ratingsDir = path.join(outputDir, "ratings");
-
-// Ensure output directories exist
-[outputDir, categoryDir, ratingsDir].forEach((dir) => {
-    if (!fs.existsSync(dir)) {
-        console.log(`Creating directory: ${dir}`);
-        fs.mkdirSync(dir, { recursive: true });
-    }
-});
-
-// Default rating enum values
-const ratingEnum = [0, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 10.0];
-
-// Parse UI specifications from Specs UI column
-function parseUISpecs(uiSpecs) {
-    if (!uiSpecs) return {};
-    const specs = {};
-    uiSpecs.split("\n").forEach((spec) => {
-        const [field, value] = spec.split("=").map((s) => s.trim());
-        if (field && value) {
-            specs[field.toLowerCase().replace(/\s+/g, "-")] = value;
-        }
-    });
-    return specs;
-}
-
-// Parse values specifications from Specs values column
-function parseValueSpecs(valueSpecs) {
-    if (!valueSpecs) return {};
-    const specs = {};
-    valueSpecs.split("\n").forEach((spec) => {
-        const [field, value] = spec.split("=").map((s) => s.trim());
-        if (field && value) {
-            specs[field.toLowerCase().replace(/\s+/g, "-")] = value;
-        }
-    });
-    return specs;
-}
-
-// Format category unique name
-function formatCategoryUniqueName(category) {
-    return category.toLowerCase().replace(/\s+/g, "-");
-}
-
-// Process Excel file and generate JSON
-async function processExcel(filePath) {
-    console.log("Processing Excel file:", filePath);
-
+const processExcelFile = async (filePath) => {
     const workbook = xlsx.readFile(filePath);
     const sheetName = workbook.SheetNames[0];
     const sheet = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
 
-    console.log(`Total rows found: ${sheet.length}`);
-    let outputFiles = [];
+    const categorizedData = {};
 
-    sheet.forEach((row, index) => {
-        console.log(`Processing row ${index + 1}:`, row);
+    sheet.forEach(row => {
+        let category = row.categoryUniqueName?.trim();
+        let type = row.specificationType?.trim();
+        let fieldKey = row.fieldKey?.trim();
+        let fieldLabel = row.fieldlabel?.trim();
+        let fieldType = row.fieldType?.trim() || "string";
+        let widget = row["ui:widget"]?.trim();
+        let uiOption = row["ui:option"]?.trim();
+        let options = row.enum ? row.enum.split(",").map(opt => opt.trim()) : [];
 
-        const productCategory = row["Product Category"] || "Unknown Category";
-        const productName = row["Product Name"] || `Unknown Product ${index + 1}`;
-        const specsFields = row["Specs fields"] ? row["Specs fields"].split("\r\n") : [];
-        const ratingsFields = row["Ratings fields"] ? row["Ratings fields"].split("\r\n") : [];
+        if (!category || !type || !fieldKey || !fieldLabel) return; // Skip invalid rows
 
-        const uiSpecs = parseUISpecs(row["Specs UI"]);
-        const valueSpecs = parseValueSpecs(row["Specs values"]);
-
-        if (specsFields.length === 0 && ratingsFields.length === 0) {
-            console.warn(`Skipping row ${index + 1} due to missing Specs and Ratings fields.`);
-            return;
+        if (!categorizedData[type]) {
+            categorizedData[type] = {};
+        }
+        if (!categorizedData[type][category]) {
+            categorizedData[type][category] = [];
         }
 
-        const categoryUniqueName = formatCategoryUniqueName(productCategory);
-
-        let specsSchema = {
-            formSchema: {
-                title: productCategory, // ✅ Title is now set to Product Category
-                type: "object",
-                properties: {},
-                required: []
-            },
-            uiSchema: {}
+        let fieldSchema = {
+            fieldKey,
+            fieldLabel,
+            required: row.required === "Yes",
+            fieldType,
+            widget,
+            options,
+            uiOption
         };
 
-        let productSchema = {
-            formSchema: {
-                title: productCategory, // ✅ Fixed Title to match Product Category
-                type: "object",
-                properties: {},
-                required: []
-            },
-            uiSchema: {}
-        };
-
-        // Process Spec fields
-        specsFields.forEach((field) => {
-            const fieldName = field.toLowerCase().replace(/\s+/g, "-");
-            const baseProperties = {
-                type: "string",
-                fieldKey: fieldName,
-                fieldlabel: field,
-                specificationType: "specifications",
-                categoryUniqueName: categoryUniqueName
-            };
-
-            if (valueSpecs[fieldName] && valueSpecs[fieldName].toLowerCase() === "yes/no selection") {
-                specsSchema.formSchema.properties[fieldName] = {
-                    ...baseProperties,
-                    enum: ["Yes", "No"],
-                    default: "No"
-                };
-                specsSchema.uiSchema[fieldName] = {
-                    "ui:widget": "select",
-                    "ui:options": {
-                        enumOptions: [
-                            { label: "Yes", value: "Yes" },
-                            { label: "No", value: "No" }
-                        ]
-                    }
-                };
-            } else if (uiSpecs[fieldName] && uiSpecs[fieldName].toLowerCase().includes("rows")) {
-                specsSchema.formSchema.properties[fieldName] = baseProperties;
-                specsSchema.uiSchema[fieldName] = {
-                    "ui:widget": "textarea",
-                    "ui:options": {
-                        rows: parseInt(uiSpecs[fieldName].match(/\d+/)[0]) || 2
-                    }
-                };
-            } else {
-                specsSchema.formSchema.properties[fieldName] = baseProperties;
-            }
-
-            specsSchema.formSchema.required.push(fieldName);
-        });
-
-        // Process Ratings fields
-        ratingsFields.forEach((field) => {
-            const fieldName = field.toLowerCase().replace(/\s+/g, "-");
-            productSchema.formSchema.properties[fieldName] = {
-                type: "number",
-                fieldKey: fieldName,
-                fieldlabel: field,
-                specificationType: "ratings",
-                categoryUniqueName: categoryUniqueName,
-                enum: ratingEnum
-            };
-            productSchema.formSchema.required.push(fieldName);
-            productSchema.uiSchema[fieldName] = { "ui:widget": "select" };
-        });
-
-        const categoryFilePath = path.join(categoryDir, `category_${index + 1}.json`);
-        const productFilePath = path.join(ratingsDir, `ratings_${index + 1}.json`);
-
-        // Check if files already exist before writing
-        if (fs.existsSync(categoryFilePath)) {
-            console.log(`Skipping category file: ${categoryFilePath} (already exists)`);
-        } else {
-            console.log("Writing category JSON to:", categoryFilePath);
-            try {
-                fs.writeFileSync(categoryFilePath, JSON.stringify(specsSchema, null, 2));
-                console.log(`Row ${index + 1}: Category JSON generated successfully.`);
-            } catch (error) {
-                console.error(`Error writing category JSON for row ${index + 1}:`, error);
-            }
-        }
-
-        if (fs.existsSync(productFilePath)) {
-            console.log(`Skipping product file: ${productFilePath} (already exists)`);
-        } else {
-            console.log("Writing product JSON to:", productFilePath);
-            try {
-                fs.writeFileSync(productFilePath, JSON.stringify(productSchema, null, 2));
-                console.log(`Row ${index + 1}: Product JSON generated successfully.`);
-            } catch (error) {
-                console.error(`Error writing product JSON for row ${index + 1}:`, error);
-            }
-        }
-
-        outputFiles.push({ categoryFilePath, productFilePath });
+        categorizedData[type][category].push(fieldSchema);
     });
 
-    return outputFiles;
-}
+    // Ensure output directories exist inside "output"
+    const baseOutputDir = path.join(__dirname, "../output");
+    const outputDirs = ["specifications", "ratings"];
 
-module.exports = { processExcel };
+    if (!fs.existsSync(baseOutputDir)) {
+        fs.mkdirSync(baseOutputDir, { recursive: true });
+    }
+
+    outputDirs.forEach(dir => {
+        const dirPath = path.join(baseOutputDir, dir);
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath, { recursive: true });
+        }
+    });
+
+    let jsonSchemas = {};
+    Object.keys(categorizedData).forEach(type => {
+        jsonSchemas[type] = {};
+        Object.keys(categorizedData[type]).forEach(category => {
+            let schema = {
+                formSchema: {
+                    title: category.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()), // Format title
+                    type: "object",
+                    properties: {},
+                    required: []
+                },
+                uiSchema: {}
+            };
+
+            categorizedData[type][category].forEach(field => {
+                let key = field.fieldKey;
+                let property = {
+                    type: field.fieldType || "string",
+                    title: field.fieldLabel
+                };
+
+                if (field.required) {
+                    schema.formSchema.required.push(key);
+                }
+
+                // Handle Textarea with Rows
+                if (field.widget === "textarea" && field.uiOption) {
+                    let match = field.uiOption.match(/(\d+) rows/i);
+                    if (match) {
+                        schema.uiSchema[key] = {
+                            "ui:widget": "textarea",
+                            "ui:options": { rows: parseInt(match[1], 10) }
+                        };
+                    }
+                }
+
+                // Handle Yes/No Dropdown
+                if (field.widget === "select" && field.uiOption?.toLowerCase() === "yes/no") {
+                    property.type = "string";
+                    property.enum = ["Yes", "No"];
+                    schema.uiSchema[key] = { "ui:widget": "select" };
+                }
+
+                // Handle General Enum Dropdown
+                if (field.options.length > 0) {
+                    property.enum = field.options;
+                    schema.uiSchema[key] = { "ui:widget": "select" };
+                }
+
+                schema.formSchema.properties[key] = property;
+            });
+
+            // Special Handling for Ratings Schema
+            if (type === "ratings") {
+                const ratingEnum = Array.from({ length: 21 }, (_, i) => i / 2); // [0, 0.5, 1, ..., 10]
+                Object.keys(schema.formSchema.properties).forEach(key => {
+                    schema.formSchema.properties[key].type = "number";
+                    schema.formSchema.properties[key].enum = ratingEnum;
+                    schema.uiSchema[key] = { "ui:widget": "select" };
+                });
+
+                // Ensure required fields for ratings
+                schema.formSchema.required = Object.keys(schema.formSchema.properties);
+            }
+
+            // Generate JSON file path inside output directory
+            const filePath = path.join(baseOutputDir, type, `${category}.json`);
+
+            // Check if file exists and only modify if content has changed
+            if (fs.existsSync(filePath)) {
+                const existingData = fs.readFileSync(filePath, "utf8");
+                const newData = JSON.stringify(schema, null, 2);
+
+                if (existingData === newData) {
+                    console.log(`Skipping ${filePath} (no changes detected)`);
+                    return;
+                }
+            }
+
+            // Write JSON file
+            fs.writeFileSync(filePath, JSON.stringify(schema, null, 2));
+            console.log(`Updated ${filePath}`);
+
+            jsonSchemas[type][category] = schema;
+        });
+    });
+
+    return jsonSchemas;
+};
+
+module.exports = { processExcelFile };
